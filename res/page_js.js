@@ -73,7 +73,6 @@ window.addEventListener('scroll', function()
 	const rotateDeg = logoScrollAmount * 45; // пропорционально
 
 	// Расчет смещения квадрата относительно высоты header
-	const header = document.querySelector('.header');
 	const squareYTranslate = header.offsetHeight - minHeight / 2 - 2;
   
 	let translateY = logoScrollAmount * squareYTranslate;

@@ -51,20 +51,43 @@ body {
   /* Общие стили для шапки */
 .header {
 	position: fixed;
+	z-index: 99;
+	width: 100%;
 	background-color: #040404;
+	height: 120px;
+	transition-property: box-shadow;	
+	transition: all 0.1s ease;		
+	
+	top: 0;
+		
+	box-shadow: 0px 3px 20px rgb(255 154 0 / 70%); /* 255, 154, 0  255 89 0*/
+}
+
+.header-container
+{
+	position: fixed;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 12%; /* или другой процент */
-	height: 120px;
+	height: inherit;
 	box-sizing: border-box; /* чтобы паддинги учитывались в ширине */ 
-	transition-property: box-shadow;
-	transition: all 0.1s ease;
+
 	top: 0;
 	z-index: 100;
 	width: 100%;
-  
-	box-shadow: 0px 3px 20px rgb(255 154 0 / 70%); /* 255, 154, 0  255 89 0*/
+}
+
+@media (min-width: 720px) and (max-width: 2500px) {
+    .header-container {
+		width: 100%;
+    }
+}
+
+@media (min-width: 540px) and (max-width: 539px) {
+    .header-container {
+        max-width: 10px;
+    }
 }
 
 .text-holder
@@ -240,6 +263,12 @@ body {
     margin: 0;
     padding: 0;
   }
+
+@media (max-width: 959px) {
+  #header-navigation {
+    display: none;
+  }
+}
 
 .header-href-navigation {
     color: #ffffff; /* белый цвет текста */
