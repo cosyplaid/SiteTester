@@ -1,0 +1,539 @@
+@font-face {
+  font-family: "CustomFont"; /* Имя, которое вы будете использовать в CSS */
+  src: url("signpainter_housescript.otf") format("opentype"); /* Путь к файлу шрифта */
+}
+
+body {
+    margin: 0;
+    font-family: Calibri, sans-serif;
+	
+    background: #f0f0f0;
+}
+
+  /* Блокировка прокрутки */
+  body.no-scroll {
+    overflow: hidden;
+  }
+
+  #loader {
+    display: flex;
+	position: fixed; /* фиксированное позиционирование */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000; /* цвет фона */
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* чтобы был поверх всего */
+    transition: opacity 0.5s ease;
+  }
+
+  /* Логотип или изображение на Splash Screen */
+  #loader img {
+    width: 50%; /* размер логотипа */
+    height: auto;
+    animation: pulse 1.25s infinite; /* анимация для эффекта */
+	border-radius: 15px;
+  }
+  
+    @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+
+  /* Основной контент сайта скрыт по умолчанию */
+  #mainContent {
+    display: none;
+  }
+
+  /* Общие стили для шапки */
+.header {
+  position: fixed;
+  background-color: #040404;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12%; /* или другой процент */
+  height: 120px;
+  box-sizing: border-box; /* чтобы паддинги учитывались в ширине */ 
+  transition-property: box-shadow;
+  transition: all 0.1s ease;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  
+	box-shadow: 0px 3px 20px rgb(255 154 0 / 70%); /* 255, 154, 0  255 89 0*/
+}
+
+.text-holder
+{
+	flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-about
+{
+	text-align: center;
+    width: 90%;
+    height: auto;
+    font-size: 50px;
+    /* padding-inline: 20px;*/
+}
+
+.text-about.history
+{
+	width: 90%;
+    height: auto;
+    font-size: 35px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+	/*padding-inline: 20px;*/
+}
+
+.about-direction-ul li::marker
+{
+  color: #FFD595;
+}
+
+.footer {	
+	position: absolute;
+    background-color: #040404;
+    height: auto;
+    box-sizing: border-box;
+    transition: all 0.1s ease;
+    width: 100%;
+    align-items: center;
+	justify-items: center;
+}
+
+/* Пример простого скрытия/показа */
+#orderFormContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  z-index: 100;
+}
+
+#contact-container
+{
+	scroll-margin-top: 90px;
+	color: #ffe4c4;
+	display: flex;
+	justify-content: center;
+	padding-top: 60px;
+	gap: 50px;
+}
+
+.map-container {
+	width: 96%;
+	margin-bottom: 20px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.column {
+	width: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 20px; /* Расстояние между блоками внутри колонки */
+}
+
+.info-block {
+	display: flex;
+	align-items: center;
+	gap: 10px; /* Расстояние между иконкой и текстом */
+}
+
+  /* Блок с логотипом и текстом */
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+
+.info-icon{
+	fill: none;
+    stroke: #FF9A00;
+    width: 50px;
+}
+
+/* Квадрат */
+.square {
+  width: 70px;
+  height: 70px;
+  background-color: #FF9A00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 98; 
+  transition-property: box-shadow;
+  transition: all 0.1s ease;
+}
+
+/* Внутренний элемент с буквой */
+.letter {
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 50px;
+	transition: all 0.1s ease;
+}
+
+/* Надпись Line */
+.line-text {
+	font-weight: bold;
+    margin-left: 10px;
+    font-size:50px; 
+    color: #ffffff;
+    transition: all 0.1s ease;
+}
+
+/* Линия */
+.line-up{
+	position: absolute;
+	height: 2px;
+	top: 0;
+    left: 0%;
+    width: 100%;
+	background-color: #FF9A00;
+}
+
+.line-bottom{
+	position: absolute;
+	height: 2px;
+	bottom: 0;
+    left: 0%;
+    width: 100%;
+	background-color: #FF9A00;
+}
+
+/* Линия, которая появляется вместо текста */
+.line-line {
+	position: absolute;
+	height: 2px;
+	bottom: 0;
+    left: 0%;
+    width: 100%;
+	background-color: #fff;
+	opacity: 0;
+}
+
+  /* Блок справа: меню и кнопка */
+  .right-section {
+    display: flex;
+    align-items: center;
+    /*gap: 20px;  промежуток между элементами */
+  }
+
+  /* Меню навигации */
+#header-navigation 
+{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+.header-href-navigation {
+    color: #ffffff; /* белый цвет текста */
+    text-decoration: none;
+    font-weight: bold;
+	font-size: 18px; 
+  }
+
+
+  /*Бегущая строка*/
+.marquee {
+	left: 0%;
+	width: 420px;
+    height: 64px;	
+	position: relative;
+    /* overflow: hidden; */
+    transition: .3s;
+	
+	align-items: center;
+    display: flex;
+}
+
+.text {
+	color: aliceblue;
+	padding: 0 50px; /* отступы между текстами */
+	font-size: 24px;
+}
+
+.scroll-text {
+    color: #ffffff;
+	font-weight: bold;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 32px;
+}
+
+.logo
+{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;	
+	border-radius: 15px;
+}
+
+
+.t-line-background {
+	position: relative;
+	top: 0%;
+    height: calc(var(--vh, 1vh)* 100);
+	max-height: 800px;
+    overflow: hidden;
+    width: 100%;
+	background: url('9_Work.jpg') no-repeat center center;
+    color: #fff;
+	background-size: cover;
+	   
+    transition: transform .2s ease;
+    z-index: -2; /* Подложка под содержимым */
+	/* clip-path: inset(50px 0 0 0); /* Маскирование: верх 50px скрыт */
+}
+
+.tint {
+	position: absolute;
+    display: flex;
+	top: 0%;	
+    height: calc(var(--vh, 1vh)* 100);
+	max-height: 800px;
+    overflow: hidden;
+    width: 100%;
+	background-color: #111111;
+
+    transition: transform .2s ease;
+    z-index: 1;
+	pointer-events: none;
+}
+
+.content {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+    z-index: 3; /* Содержимое выше подложки */
+    padding: 0px;
+    color: white;
+	background: #111111;
+}
+
+/* From Uiverse.io by ernestnash */ 
+.slide-btn {
+ display: inline-block;
+ padding: 10px 15px;
+ font-size: 18px;
+ font-weight: 600;
+ color: #ffffff;
+ border: 3px solid #FF9A00;
+ cursor: pointer;
+ position: relative;
+ background-color: transparent;
+ text-decoration: none;
+ overflow: hidden;
+ z-index: 1;
+ font-family: inherit;
+ /* border-radius: 0.4em; */
+}
+
+.slide-btn::before {
+ content: "";
+ position: absolute;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ background-color: #FF9A00;
+ transform: translateX(-100%);
+ transition: all .15s;
+ z-index: -1;
+}
+
+.slide-btn:hover::before {
+ transform: translateX(0);
+}
+
+.carousel-container {
+  position: relative;
+  z-index: 0; /* чуть выше фона */
+}
+
+.carousel {
+	position: relative;
+	top: 0%;
+	height: calc(var(--vh, 1vh) * 100);
+	max-height: 800px;
+	overflow: hidden;
+	width: 100%;
+	background-color: transparent; /* или оставить прозрачным */
+	transition: transform .2s ease;
+}
+
+/* Для слайдов */
+.slides {
+    display: flex;
+    transition: transform 0.75s ease-in-out;
+    height: 100%; /* занимает всю высоту контейнера */
+}
+
+.slide {
+	min-height: 800px;
+    min-width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width:100%;
+    height:100%;
+    object-fit:cover; /* сохраняет пропорции и обрезает по краям при необходимости */
+}
+
+/* Навигационные точки (если нужны поверх) */
+.nav-dots {
+	user-select: none; /* запретить выделение текста */
+	position: absolute; /* поверх слайдов */
+	bottom: 20px; /* чуть выше низа */
+	left:50%;
+	transform: translateX(-50%);
+	display:flex;
+	gap:10px;
+	z-index: 2;
+}
+
+.dot {
+	display:inline-block;
+	width:12px;
+	height:12px;
+	background:#a3a3a3;
+	border-radius:50%;
+	cursor:pointer;
+	transition:bg-color 0.3s;
+}
+
+.dot.active {
+	background: #FF9A00;
+}
+
+.social-links-container
+{
+	/* position: relative;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; */
+	display: flex;
+	padding: 50px 50px;
+	color: #ffe4c4;
+	justify-content: center;
+}
+
+.social-links
+{
+	gap: 20px;
+    max-width: 1000px;
+    color: #ffe4c4;
+	display: flex;
+}
+
+.social-link
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid;
+    border-radius: 50%;
+    color: inherit;
+    /* cursor: pointer; */
+}
+
+/* From Uiverse.io by vinodjangid07 */ 
+.card {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* for all social containers*/
+.socialContainer {
+	width: 52px;
+	height: 52px;
+	background-color: rgb(44, 44, 44);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	transition-duration: 1s;
+	border-radius: 25px;
+}
+/* VK */
+.containerOne:hover {
+  background-color: #0072b1;
+  transition-duration: .1s;
+}
+/* TG */
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .1;
+}
+/* Mail */
+.containerThree:hover {
+  background-color: #B39C32;
+  transition-duration: .1s;
+}
+/* Whatsapp */
+.containerFour:hover {
+  background-color: #2D792E;
+  transition-duration: .1s;
+}
+/* YouTube */
+.containerFive:hover {
+  background-color: #C73D3D;
+  transition-duration: .1s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .1s;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#big_light_70000001059848980
+{
+	width: 95%;
+    padding: 20px;
+}
+
