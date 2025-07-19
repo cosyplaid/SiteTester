@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<html> 
+<head> 
+	<meta content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<title>РПК T-LINE</title>	
+	<meta name="description" content="Сайт студии типографии T-Line"/> 
+	<meta name="keywords" content="T-Line, Т-Лайн, т лайн, t line, типография, дизайн, вывески, рассадки, фото, печать, типография тюмень, стикеры тюмень"/> 
+	
+	<meta property="og:url" content="https://tline72.ru"/> 
+	<meta property="og:title" content="Студия T-LINE" /> 
+	<meta property="og:description" content="Помогаем нашим клиентам уже больше шести лет."/> 
+	<meta property="og:type" content="website" /> 
+	
+	<link rel="icon" type="image/jpeg" sizes="180x180" href="res/Favicon_Simple_White.jpg">
+	<link rel="apple-touch-icon" type="image/jpeg" sizes="180x180" href="res/Favicon_Simple_White.jpg">
+	
+	<link rel="canonical" href="https://tline72.ru"> <!--/metatextblock--> 
+	<meta name="format-detection" content="telephone=no" /> 
+	<meta http-equiv="x-dns-prefetch-control" content="on"> 
+	
+	<link rel="stylesheet" type="text/css" href="res/style.css">	
+	<link rel="stylesheet" type="text/css" href="res/style_card.css">	
+	
+</head>
+
+<body class="no-scroll">
+
+<!-- Загрузочный экран -->
+<div id="loader">
+  <img src="res/T-Line_load.jpeg" alt="Логотип" />
+</div>
+
+<header class="header">
+	
+<div class="logo-container">
+	<div class="square" id="square">
+		<div class="letter">T</div>
+	</div>
+	
+<div class="line-text" id="lineText">Line</div>
+</div>
+	
+  <!-- Левая часть с логотипом
+  <div class="logo-holder">
+  <img class="logo" src="https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site714830/ad16f6fe-e8c4-49b6-b824-e145ba614ce2/ad16f6fe-e8c4-49b6-b824-e145ba614ce2-6164573.jpeg" alt="Изображение">
+  </div> -->
+
+  <div class="marquee" id="marquee">
+<div class="scroll-text" id="scrollText"></div>
+  </div>
+
+  <!-- Правая часть с меню и кнопкой -->
+  <div class="right-section">
+    <nav>
+      <ul id="header-navigation">
+        <li style="margin-right: 20px"><a class="header-href-navigation" href="#">Главная</a></li>
+        <li style="margin-right: 20px"><a class="header-href-navigation" href="#">Услуги</a></li>
+        <li style="margin-right: 20px"><a class="header-href-navigation" href="#contact-container" onclick="scrollToContacts(event)">Контакты</a></li>
+		</ul>
+    </nav>
+    
+	<a class="slide-btn" href="#">Оформить заказ</a>
+  </div>
+
+	<div class="line-bottom" id="line"></div>
+	<div class="line-line" id="line"></div>
+
+</header>
+	<!-- <div class="t-line-background"></div> -->
+	<!-- <div class="tint"></div> -->
+	<div class="carousel-container">
+	
+	<div class="tint"></div>
+	
+	<div class="carousel">
+		<div class="slides" id="slides">
+			<div class="slide"><img src="res/1.jpg" alt="Фото1"></div>
+			<div class="slide"><img src="res/2.jpg" alt="Фото2"></div>
+			<div class="slide"><img src="res/3.jpg" alt="Фото3"></div>
+			<div class="slide"><img src="res/4.jpg" alt="Фото4"></div>
+			<div class="slide"><img src="res/5.jpg" alt="Фото5"></div>
+			<div class="slide"><img src="res/6.jpg" alt="Фото6"></div>	
+		</div>	
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Предыдущий</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Следующий</span>
+		</button>
+	</div>
+
+	    <!-- Точки поверх -->
+		<div class="nav-dots" id="dotsContainer"></div>
+	</div>
+
+	<div class="content">
+	
+		<div class="line-up" id="line"></div>
+	
+		<div class="social-links-container">
+			<nav class="social-links"> 	
+<div class="card">
+  <a class="socialContainer containerOne" href="https://vk.com/t_line_photo" target="_blank" aria-label="Вконтакте">
+    <svg class="socialSvg vkSVG" width="26" height="26" viewBox="0 0 24 24"> <path id="ic-vk" fill-rule="evenodd" clip-rule="evenodd" d="M17.7703 13.3585C18.301 13.9307 18.8612 14.4692 19.3372 15.0992C19.5475 15.3791 19.7466 15.668 19.8989 15.9929C20.1147 16.4548 19.9192 16.963 19.5442 16.9906L17.2133 16.9894C16.6121 17.0445 16.1325 16.7772 15.7293 16.3233C15.4066 15.9602 15.1077 15.5739 14.7974 15.1986C14.6702 15.0452 14.537 14.9008 14.3779 14.7868C14.0597 14.5586 13.7835 14.6285 13.6017 14.995C13.4165 15.3678 13.3745 15.7806 13.3563 16.1961C13.3313 16.8023 13.1654 16.9616 12.6141 16.9894C11.4358 17.0507 10.3175 16.8539 9.2787 16.1974C8.36284 15.6187 7.65263 14.8017 7.03447 13.8767C5.83089 12.0757 4.90919 10.0967 4.08081 8.06218C3.89434 7.60381 4.03071 7.35776 4.48864 7.34905C5.24905 7.33273 6.00936 7.33389 6.77067 7.34789C7.07973 7.35288 7.28433 7.54865 7.40366 7.87111C7.81507 8.98833 8.31847 10.0513 8.95036 11.0365C9.11863 11.2988 9.29022 11.5611 9.53456 11.7458C9.80487 11.9502 10.0107 11.8824 10.1378 11.5499C10.2185 11.339 10.2539 11.1119 10.2721 10.886C10.3323 10.109 10.3402 9.33337 10.2346 8.5591C10.1697 8.07588 9.92326 7.76306 9.48667 7.67162C9.26388 7.625 9.29705 7.53344 9.40492 7.393C9.59228 7.15078 9.76849 7 10.1198 7H12.7541C13.1688 7.0904 13.2609 7.29616 13.3177 7.75703L13.3199 10.9887C13.3154 11.1672 13.4006 11.6966 13.6916 11.8147C13.9245 11.8987 14.078 11.693 14.2177 11.5299C14.8484 10.7906 15.2986 9.91686 15.7007 9.01214C15.8792 8.61432 16.0327 8.20117 16.1814 7.78838C16.2916 7.48206 16.4645 7.33134 16.7769 7.33802L19.3122 7.34051C19.3874 7.34051 19.4635 7.34173 19.5363 7.35549C19.9635 7.4359 20.0806 7.63888 19.9486 8.09963C19.7407 8.82252 19.3362 9.42493 18.9407 10.0301C18.5179 10.6763 18.0657 11.3003 17.6464 11.9502C17.2611 12.5438 17.2917 12.843 17.7703 13.3585V13.3585Z" fill="currentColor"></path></svg>
+  </a>
+  
+  <a class="socialContainer containerTwo" href="https://t.me/tline72" target="_blank" aria-label="Telegram">
+    <svg class="socialSvg tgSVG" width="20" height="14" viewBox="5 0 10 13"><path d="M1.09992 5.59647C5.39487 3.76188 8.25885 2.55241 9.69185 1.96805C13.7834 0.299594 14.6335 0.00976514 15.1877 9.27819e-05C15.3095 -0.00191006 15.582 0.0277027 15.7586 0.16813C15.9076 0.286703 15.9486 0.44688 15.9683 0.5593C15.9879 0.671721 16.0123 0.927819 15.9929 1.12793C15.7712 3.41192 14.8118 8.95457 14.3237 11.5127C14.1172 12.5951 13.7105 12.958 13.3168 12.9936C12.4613 13.0707 11.8116 12.4392 10.9829 11.9067C9.68624 11.0733 8.95369 10.5545 7.69503 9.74136C6.24042 8.80157 7.18338 8.28505 8.01236 7.44091C8.22931 7.21999 11.999 3.85836 12.0719 3.55341C12.0811 3.51527 12.0895 3.37311 12.0034 3.29804C11.9172 3.22297 11.7901 3.24864 11.6983 3.26906C11.5683 3.29799 9.4968 4.64035 5.48389 7.29611C4.89591 7.69195 4.36333 7.88482 3.88616 7.87472C3.36012 7.86357 2.34822 7.58311 1.59598 7.34338C0.673328 7.04933 -0.0599784 6.89387 0.00387615 6.3945C0.0371355 6.13439 0.402482 5.86838 1.09992 5.59647Z" fill="currentColor"></path></svg></a>
+    
+  <a class="socialContainer containerThree" href="mailto:t.line72.ru@gmail.com" target="_blank" aria-label="Почта">
+    <svg class="socialSvg mailSVG" width="16" height="16" viewBox="0 0 16 16"><path d="M7.21596 5.91784C7.63375 6.19676 8.36681 6.19679 8.78469 5.91781C8.78475 5.91777 8.78485 5.91771 8.78491 5.91768L15.9057 1.16376C15.6722 0.487312 15.0302 0 14.2763 0H1.72423C0.970317 0 0.328343 0.487312 0.0947475 1.16376L7.21574 5.91771C7.21584 5.91777 7.2159 5.91777 7.21596 5.91784Z" fill="currentColor"></path><path d="M9.30464 6.69873C9.30454 6.6988 9.30448 6.69886 9.30442 6.69889C8.93873 6.94302 8.46929 7.06509 8 7.06509C7.53062 7.06509 7.06137 6.94305 6.69565 6.69886C6.69558 6.69883 6.69555 6.6988 6.69549 6.69877L0 2.22888V10.2737C0 11.2256 0.77335 12 1.72395 12H14.2761C15.2267 12 16 11.2256 16 10.2737V2.22888L9.30464 6.69873Z" fill="currentColor"></path></svg>
+  </a>
+  
+  <a class="socialContainer containerFour" href="https://wa.me/79827732303" target="_blank" aria-label="WhatsApp">
+    <svg class="socialSvg whatsAppSVG" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.14201 0C12.4749 0 16 3.49891 16 7.79964C16 12.0999 12.4749 15.5984 8.14207 15.5984C6.84253 15.5984 5.55848 15.278 4.42238 14.671L0.270689 15.9902C0.250014 15.9968 0.228819 16 0.20778 16C0.152871 16 0.0991049 15.9782 0.0594685 15.9377C0.00455945 15.8818 -0.014142 15.7997 0.0110009 15.7255L1.36077 11.7439C0.655572 10.5523 0.283313 9.19065 0.283313 7.79964C0.283313 3.49891 3.80871 0 8.14201 0ZM11.8392 9.19382C11.808 9.17886 10.6415 8.60447 10.4343 8.52987C10.3497 8.49948 10.259 8.46982 10.1626 8.46982C10.0051 8.46982 9.87277 8.54831 9.7697 8.70249C9.65318 8.87569 9.30046 9.288 9.19147 9.41117C9.17723 9.42743 9.15781 9.44686 9.14617 9.44686C9.13573 9.44686 8.95521 9.37252 8.90056 9.34878C7.64929 8.80525 6.69952 7.49818 6.56929 7.27777C6.55069 7.24608 6.54991 7.23169 6.54975 7.23169C6.55433 7.21491 6.5964 7.17273 6.61812 7.15096C6.68165 7.0881 6.75048 7.00525 6.81708 6.92509C6.84861 6.88712 6.8802 6.84909 6.91121 6.81325C7.00783 6.70083 7.05085 6.61356 7.10072 6.51247L7.12684 6.45995C7.24861 6.21803 7.14461 6.01387 7.111 5.94795C7.08342 5.89278 6.5909 4.7041 6.53853 4.57922C6.41261 4.27787 6.24622 4.13756 6.015 4.13756C5.99355 4.13756 6.015 4.13756 5.92503 4.14135C5.81547 4.14597 5.21884 4.22452 4.95505 4.39081C4.67531 4.56717 4.20207 5.12935 4.20207 6.11803C4.20207 7.00784 4.76674 7.848 5.00918 8.16753C5.01521 8.17558 5.02627 8.19195 5.04233 8.21543C5.97079 9.57138 7.12825 10.5763 8.3016 11.045C9.43121 11.4962 9.96612 11.5484 10.2702 11.5484C10.2703 11.5484 10.2703 11.5484 10.2703 11.5484C10.3981 11.5484 10.5004 11.5383 10.5906 11.5295L10.6478 11.524C11.0381 11.4894 11.8956 11.045 12.0907 10.503C12.2444 10.076 12.2849 9.60951 12.1826 9.44021C12.1126 9.32509 11.9919 9.26717 11.8392 9.19382Z" fill="currentColor"></path></svg>
+  </a>
+  
+  <a class="socialContainer containerFive" href="https://www.youtube.com/channel/UCwXM1Fqk8HT1vM03zG5TaEQ" target="_blank" aria-label="Ютуб">
+    <svg class="socialSvg youTubeSVG" width="24" height="24" viewBox="0 0 24 24"><path id="ic-youtube" fill-rule="evenodd" clip-rule="evenodd" d="M19.3764 7.03011C18.7988 6.29845 17.7325 6 15.6961 6H8.30379C6.22075 6 5.13636 6.3177 4.56098 7.09667C4 7.85616 4 8.97522 4 10.524V13.476C4 16.4766 4.6656 18 8.30379 18H15.6961C17.4621 18 18.4407 17.7366 19.0738 17.0909C19.723 16.4288 20 15.3477 20 13.476V10.524C20 8.89068 19.9566 7.76502 19.3764 7.03011ZM14.2721 12.4076L10.9153 14.2772C10.8402 14.319 10.7581 14.3398 10.6762 14.3398C10.5834 14.3398 10.4908 14.3131 10.4088 14.2602C10.2543 14.1605 10.1601 13.9821 10.1601 13.7897V10.0624C10.1601 9.87036 10.2541 9.69214 10.4082 9.59237C10.5624 9.49259 10.7541 9.48577 10.9141 9.57432L14.2709 11.4319C14.4417 11.5264 14.5489 11.7143 14.5492 11.9193C14.5494 12.1245 14.4426 12.3126 14.2721 12.4076Z" fill="currentColor"></path></svg>
+  </a>  
+</div>     
+		</nav>
+		</div>
+
+		<div class="text-holder">
+		<div class="text-about">
+			<b>Компания <font style="color: #FF9A00;">T-Line</font></b> - многопрофильная компания, с опытом работы на рынке более 7 лет. Мы занимаемся фото-видеосъёмкой, созданием контента, а так же услугами типографии, полиграфии, POS-продукцией, Вывесками, наружней рекламой.
+		</div>
+		</div>
+
+        <h1>Здесь начинается контент страницы!</h1>
+        <p>Это блок для контента.</p>
+	
+		<div class="line-bottom" id="line"></div>
+		
+    </div>
+	
+	<div class="content">		
+		<h1 style="margin: 0px;text-align: center;align-self: center;font-size: 60px;"><b>История <font style="color: #FF9A00;">компании</font></b></h1>
+	<div class="text-holder">				
+		<div class = "text-about history"><b><font style="color: #FF9A00">T-Line</font></b> - многопрофильная компания, основанная в 2018 году. Сотрудники компании имеют опыт работы более 12 лет и продолжают развивать свои компетенции в различных направлениях. 
+			Каждый - профессионал своего дела! Мы ценим индивидуальный подход к каждому, поэтому наши клиенты это - 1000 счастливых владельцев бизнеса, увлеченных творческих личностей, студентов и всех людей, кому мы оказывали наши услуги.<br>Компания развивается в <font style="color: #FF9A00">4-х направлениях:</font></div>
+		<!--<div class="text-about history" style="padding-bottom: 20px; line-height: 2;text-align: left;font-size: 20px; width: 85%">
+			<nav>
+				<ul class="about-direction-ul">
+					<li><b><font style="color: #FFD595">Видеопродакшн</font></b> - создание видеоконтента, видеороликов, видеообзоры, рекламы, съёмка торжеств, репортажи.</li>
+					<li><b><font style="color: #FFD595">Фотография</font></b> - экспресс фото, бизнес фото, репортаж, мероприятия, события, свадьбы, фотосессия.</li>
+					<li><b><font style="color: #FFD595">Типография</font></b> - дизайн, полиграфия, фото на документы, копирование, широкоформатная печать, фотохолсты, медали, кубки, футболки, кепки, нанесение изображений и надписей на одежду, кружки, тарелки.</li>
+					<li><b><font style="color: #FFD595">Наружная реклама и вывески</font></b> - замер, дизайн, изготовление, монтаж.</li>
+				</ul>
+			</nav>
+		</div>	-->
+	</div>
+
+<div class="direction-pc">
+	<div class="column left">
+		<div class="direction-card">
+			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
+			<p class="card__title">Видеопродакшн</p>
+			<div class="card__content">
+				<p class="card__title">Видеопродакшн</p>
+				<p class="card__description">Создание видеоконтента, видеороликов, видеообзоры, рекламы, съёмка торжеств, репортажи.</p>
+			</div>
+		</div>
+		<div class="direction-card">
+			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
+			<p class="card__title">Фотография</p>
+			<div class="card__content">
+				<p class="card__title">Фотография</p>
+				<p class="card__description">Экспресс фото, бизнес фото, репортаж, мероприятия, события, свадьбы, фотосессия.</p>
+			</div>
+		</div>
+	</div>
+	<div class="column right">
+		<div class="direction-card">
+			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
+			<p class="card__title">Типография</p>
+			<div class="card__content">
+				<p class="card__title">Типография</p>
+				<p class="card__description">Дизайн, полиграфия, фото на документы, копирование, широкоформатная печать, фотохолсты, медали, кубки, футболки, кепки, нанесение изображений и надписей на одежду, кружки, тарелки.</p>
+			</div>
+		</div>
+		<div class="direction-card">
+			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
+			<p class="card__title">Наружная реклама</p>
+			<div class="card__content">
+				<p class="card__title">Наружная реклама и вывески</p>
+				<p class="card__description">Замер, дизайн, изготовление, монтаж.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<div class="line-bottom" id="line"></div>
+	</div>
+		
+    <script src="res/page_js.js"></script>
+	
+	<footer class="footer">
+	
+	<div id="contact-container">
+		<div class="column left">
+			<div class="info-block">
+				<div class="info-icon">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 -1 18 18" xml:space="preserve">
+						<path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+					</svg></div>  
+				<div class="info-text"><b>Адрес:</b><br>г. Тюмень, ул. 50 лет ВЛКСМ, 13 к1  цокольный этаж</div>
+				
+			</div>
+			<div class="info-block">
+				<div class="info-icon">
+					<svg viewBox="0 0 27 27" stroke="none" xmlns="http://www.w3.org/2000/svg xml:space="preserve"">
+						<path d="M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM3.00683 12C3.00683 16.9668 7.03321 20.9932 12 20.9932C16.9668 20.9932 20.9932 16.9668 20.9932 12C20.9932 7.03321 16.9668 3.00683 12 3.00683C7.03321 3.00683 3.00683 7.03321 3.00683 12Z" fill="#FF9A00"/>
+						<path d="M12 5C11.4477 5 11 5.44771 11 6V12.4667C11 12.4667 11 12.7274 11.1267 12.9235C11.2115 13.0898 11.3437 13.2343 11.5174 13.3346L16.1372 16.0019C16.6155 16.278 17.2271 16.1141 17.5032 15.6358C17.7793 15.1575 17.6155 14.5459 17.1372 14.2698L13 11.8812V6C13 5.44772 12.5523 5 12 5Z" fill="#FF9A00"/>
+					</svg></div>  
+				<div class="info-text"><b>Время работы:</b><br>Пн-Пт: 9:00-19:00<br>Сб: 10:00-17:00<br>Вс: Выходной</div>
+			</div>
+		</div>
+		<div class="column right">
+			<div class="info-block">
+				<div class="info-icon">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#FF9A00" viewBox="0 0 256 256"xml:space="preserve" stroke="none">
+							<path d="M137.1,20.2v31.4c7.3,0.4,14.3,1.6,20.7,3.7L154,67.3c-5.2-1.7-10.9-2.7-16.9-3.1v146.2l104,31.4V51.6L137.1,20.2z M209.8,126.2c0,2.5-0.2,4.8-0.6,6.8l-12.5-2.3c0.2-1.2,0.4-2.8,0.4-4.5c0-3.9-0.6-8.3-1.8-12.9l12.3-3.1 C209,115.8,209.8,121.3,209.8,126.2z M204.2,99.7l-11.8,4.7c-2.4-5.9-5.4-11.3-9.1-16.2l10.1-7.7 C197.9,86.3,201.5,92.8,204.2,99.7z M168.1,59.4c6.7,3.3,12.7,7.6,18.1,12.9l-8.9,9.1c-4.4-4.3-9.4-7.8-14.8-10.6L168.1,59.4z M205.9,193.7l-7.4-16.6l-8.7,10.9l-16.7-5.8l14.6-17.6l-13.8-25.5l18.2,6.4l6.4,14.3l7.4-9.5l17,5.9l-13.7,15.9l14.7,27.9 L205.9,193.7z"/>
+							<path d="M103.4,58.2c5.9-3.5,12.4-5.7,19.3-6.4V20.2l-104,31.4v190.3l104-31.4V64.6c-4.6,0.7-8.8,2.2-12.9,4.6L103.4,58.2z M37.9,164.1c-8.6,0-15.5-7-15.5-15.5c0-8.6,7-15.5,15.5-15.5c8.6,0,15.5,7,15.5,15.5C53.5,157.2,46.5,164.1,37.9,164.1z M60.3,143 l-7.8-10c4.6-3.6,8.4-8.1,11.3-13.5l11.1,6.1C71.1,132.5,66.2,138.3,60.3,143z M79.4,115.5l-11.9-4.3c2.7-7.7,5.3-13.8,8-19.4 l11.4,5.5C84.4,102.5,82,108.3,79.4,115.5z M91.4,88.9l-10.9-6.5c4.1-6.9,8.8-12.7,13.7-17.3l8.6,9.3C98.7,78.2,94.9,83,91.4,88.9z"/>
+					</svg></div>
+				<div class="info-text"><b>Как проехать:</b><br>Остановка Социальный фонд России</div>				
+			</div>
+			<div class="info-block">
+				<div class="info-icon">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" stroke-width = "2px" xml:space="preserve">
+						<path d="M13.6,8.5L9.5,4.3C9,3.9,8.3,3.9,7.8,4.3L4.7,7.5 C4,8.1,3.8,9.1,4.1,9.9c0.8,2.3,2.9,6.9,7,11s8.7,6.1,11,7c0.9,0.3,1.8,0.1,2.5-0.5l3.1-3.1c0.5-0.5,0.5-1.2,0-1.7l-4.1-4.1 c-0.5-0.5-1.2-0.5-1.7,0l-2.5,2.5c0,0-2.8-1.2-5-3.3s-3.3-5-3.3-5l2.5-2.5C14.1,9.7,14.1,8.9,13.6,8.5z"/>
+					</svg></div>
+				<div class="info-text"><b>Свяжитесь с нами:</b><br>8 (3452) 38-82-15<br>8-982-773-23-03<br>8 (3452) 38-84-50<br>8-919-950-84-50<br><div id="copyText" style="cursor: pointer">t.line72.ru@gmail.com</div></div>					
+							<!-- Cообщение о копировании -->
+				<div id="message" style="margin-top: 10px; color: green;"></div>		
+			</div>
+	
+			</div>			
+			
+				<!--<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aed8e3a99d92e90d6c814ba5dec239000c52ae475eb5450aca5f9415a5e78e6ba&amp;source=constructor" width="1280" height="600" frameborder="0"></iframe> -->
+		</div>
+	           
+		
+		
+		<div class="social-links-container">
+			<nav class="social-links"> 	
+			<div class="card">
+  <a class="socialContainer containerOne" href="https://vk.com/t_line_photo" target="_blank" aria-label="Вконтакте">
+    <svg class="socialSvg vkSVG" width="26" height="26" viewBox="0 0 24 24"> <path id="ic-vk" fill-rule="evenodd" clip-rule="evenodd" d="M17.7703 13.3585C18.301 13.9307 18.8612 14.4692 19.3372 15.0992C19.5475 15.3791 19.7466 15.668 19.8989 15.9929C20.1147 16.4548 19.9192 16.963 19.5442 16.9906L17.2133 16.9894C16.6121 17.0445 16.1325 16.7772 15.7293 16.3233C15.4066 15.9602 15.1077 15.5739 14.7974 15.1986C14.6702 15.0452 14.537 14.9008 14.3779 14.7868C14.0597 14.5586 13.7835 14.6285 13.6017 14.995C13.4165 15.3678 13.3745 15.7806 13.3563 16.1961C13.3313 16.8023 13.1654 16.9616 12.6141 16.9894C11.4358 17.0507 10.3175 16.8539 9.2787 16.1974C8.36284 15.6187 7.65263 14.8017 7.03447 13.8767C5.83089 12.0757 4.90919 10.0967 4.08081 8.06218C3.89434 7.60381 4.03071 7.35776 4.48864 7.34905C5.24905 7.33273 6.00936 7.33389 6.77067 7.34789C7.07973 7.35288 7.28433 7.54865 7.40366 7.87111C7.81507 8.98833 8.31847 10.0513 8.95036 11.0365C9.11863 11.2988 9.29022 11.5611 9.53456 11.7458C9.80487 11.9502 10.0107 11.8824 10.1378 11.5499C10.2185 11.339 10.2539 11.1119 10.2721 10.886C10.3323 10.109 10.3402 9.33337 10.2346 8.5591C10.1697 8.07588 9.92326 7.76306 9.48667 7.67162C9.26388 7.625 9.29705 7.53344 9.40492 7.393C9.59228 7.15078 9.76849 7 10.1198 7H12.7541C13.1688 7.0904 13.2609 7.29616 13.3177 7.75703L13.3199 10.9887C13.3154 11.1672 13.4006 11.6966 13.6916 11.8147C13.9245 11.8987 14.078 11.693 14.2177 11.5299C14.8484 10.7906 15.2986 9.91686 15.7007 9.01214C15.8792 8.61432 16.0327 8.20117 16.1814 7.78838C16.2916 7.48206 16.4645 7.33134 16.7769 7.33802L19.3122 7.34051C19.3874 7.34051 19.4635 7.34173 19.5363 7.35549C19.9635 7.4359 20.0806 7.63888 19.9486 8.09963C19.7407 8.82252 19.3362 9.42493 18.9407 10.0301C18.5179 10.6763 18.0657 11.3003 17.6464 11.9502C17.2611 12.5438 17.2917 12.843 17.7703 13.3585V13.3585Z" fill="currentColor"></path></svg>
+  </a>
+  
+  <a class="socialContainer containerTwo" href="https://t.me/tline72" target="_blank" aria-label="Telegram">
+    <svg class="socialSvg tgSVG" width="20" height="14" viewBox="5 0 10 13"><path d="M1.09992 5.59647C5.39487 3.76188 8.25885 2.55241 9.69185 1.96805C13.7834 0.299594 14.6335 0.00976514 15.1877 9.27819e-05C15.3095 -0.00191006 15.582 0.0277027 15.7586 0.16813C15.9076 0.286703 15.9486 0.44688 15.9683 0.5593C15.9879 0.671721 16.0123 0.927819 15.9929 1.12793C15.7712 3.41192 14.8118 8.95457 14.3237 11.5127C14.1172 12.5951 13.7105 12.958 13.3168 12.9936C12.4613 13.0707 11.8116 12.4392 10.9829 11.9067C9.68624 11.0733 8.95369 10.5545 7.69503 9.74136C6.24042 8.80157 7.18338 8.28505 8.01236 7.44091C8.22931 7.21999 11.999 3.85836 12.0719 3.55341C12.0811 3.51527 12.0895 3.37311 12.0034 3.29804C11.9172 3.22297 11.7901 3.24864 11.6983 3.26906C11.5683 3.29799 9.4968 4.64035 5.48389 7.29611C4.89591 7.69195 4.36333 7.88482 3.88616 7.87472C3.36012 7.86357 2.34822 7.58311 1.59598 7.34338C0.673328 7.04933 -0.0599784 6.89387 0.00387615 6.3945C0.0371355 6.13439 0.402482 5.86838 1.09992 5.59647Z" fill="currentColor"></path></svg></a>
+    
+  <a class="socialContainer containerThree" href="mailto:t.line72.ru@gmail.com" target="_blank" aria-label="Почта">
+    <svg class="socialSvg mailSVG" width="16" height="16" viewBox="0 0 16 16"><path d="M7.21596 5.91784C7.63375 6.19676 8.36681 6.19679 8.78469 5.91781C8.78475 5.91777 8.78485 5.91771 8.78491 5.91768L15.9057 1.16376C15.6722 0.487312 15.0302 0 14.2763 0H1.72423C0.970317 0 0.328343 0.487312 0.0947475 1.16376L7.21574 5.91771C7.21584 5.91777 7.2159 5.91777 7.21596 5.91784Z" fill="currentColor"></path><path d="M9.30464 6.69873C9.30454 6.6988 9.30448 6.69886 9.30442 6.69889C8.93873 6.94302 8.46929 7.06509 8 7.06509C7.53062 7.06509 7.06137 6.94305 6.69565 6.69886C6.69558 6.69883 6.69555 6.6988 6.69549 6.69877L0 2.22888V10.2737C0 11.2256 0.77335 12 1.72395 12H14.2761C15.2267 12 16 11.2256 16 10.2737V2.22888L9.30464 6.69873Z" fill="currentColor"></path></svg>
+  </a>
+  
+  <a class="socialContainer containerFour" href="https://wa.me/79827732303" target="_blank" aria-label="WhatsApp">
+    <svg class="socialSvg whatsAppSVG" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.14201 0C12.4749 0 16 3.49891 16 7.79964C16 12.0999 12.4749 15.5984 8.14207 15.5984C6.84253 15.5984 5.55848 15.278 4.42238 14.671L0.270689 15.9902C0.250014 15.9968 0.228819 16 0.20778 16C0.152871 16 0.0991049 15.9782 0.0594685 15.9377C0.00455945 15.8818 -0.014142 15.7997 0.0110009 15.7255L1.36077 11.7439C0.655572 10.5523 0.283313 9.19065 0.283313 7.79964C0.283313 3.49891 3.80871 0 8.14201 0ZM11.8392 9.19382C11.808 9.17886 10.6415 8.60447 10.4343 8.52987C10.3497 8.49948 10.259 8.46982 10.1626 8.46982C10.0051 8.46982 9.87277 8.54831 9.7697 8.70249C9.65318 8.87569 9.30046 9.288 9.19147 9.41117C9.17723 9.42743 9.15781 9.44686 9.14617 9.44686C9.13573 9.44686 8.95521 9.37252 8.90056 9.34878C7.64929 8.80525 6.69952 7.49818 6.56929 7.27777C6.55069 7.24608 6.54991 7.23169 6.54975 7.23169C6.55433 7.21491 6.5964 7.17273 6.61812 7.15096C6.68165 7.0881 6.75048 7.00525 6.81708 6.92509C6.84861 6.88712 6.8802 6.84909 6.91121 6.81325C7.00783 6.70083 7.05085 6.61356 7.10072 6.51247L7.12684 6.45995C7.24861 6.21803 7.14461 6.01387 7.111 5.94795C7.08342 5.89278 6.5909 4.7041 6.53853 4.57922C6.41261 4.27787 6.24622 4.13756 6.015 4.13756C5.99355 4.13756 6.015 4.13756 5.92503 4.14135C5.81547 4.14597 5.21884 4.22452 4.95505 4.39081C4.67531 4.56717 4.20207 5.12935 4.20207 6.11803C4.20207 7.00784 4.76674 7.848 5.00918 8.16753C5.01521 8.17558 5.02627 8.19195 5.04233 8.21543C5.97079 9.57138 7.12825 10.5763 8.3016 11.045C9.43121 11.4962 9.96612 11.5484 10.2702 11.5484C10.2703 11.5484 10.2703 11.5484 10.2703 11.5484C10.3981 11.5484 10.5004 11.5383 10.5906 11.5295L10.6478 11.524C11.0381 11.4894 11.8956 11.045 12.0907 10.503C12.2444 10.076 12.2849 9.60951 12.1826 9.44021C12.1126 9.32509 11.9919 9.26717 11.8392 9.19382Z" fill="currentColor"></path></svg>
+  </a>
+  
+  <a class="socialContainer containerFive" href="https://www.youtube.com/channel/UCwXM1Fqk8HT1vM03zG5TaEQ" target="_blank" aria-label="Ютуб">
+    <svg class="socialSvg youTubeSVG" width="24" height="24" viewBox="0 0 24 24"><path id="ic-youtube" fill-rule="evenodd" clip-rule="evenodd" d="M19.3764 7.03011C18.7988 6.29845 17.7325 6 15.6961 6H8.30379C6.22075 6 5.13636 6.3177 4.56098 7.09667C4 7.85616 4 8.97522 4 10.524V13.476C4 16.4766 4.6656 18 8.30379 18H15.6961C17.4621 18 18.4407 17.7366 19.0738 17.0909C19.723 16.4288 20 15.3477 20 13.476V10.524C20 8.89068 19.9566 7.76502 19.3764 7.03011ZM14.2721 12.4076L10.9153 14.2772C10.8402 14.319 10.7581 14.3398 10.6762 14.3398C10.5834 14.3398 10.4908 14.3131 10.4088 14.2602C10.2543 14.1605 10.1601 13.9821 10.1601 13.7897V10.0624C10.1601 9.87036 10.2541 9.69214 10.4082 9.59237C10.5624 9.49259 10.7541 9.48577 10.9141 9.57432L14.2709 11.4319C14.4417 11.5264 14.5489 11.7143 14.5492 11.9193C14.5494 12.1245 14.4426 12.3126 14.2721 12.4076Z" fill="currentColor"></path></svg>
+  </a>  
+</div> 
+			</nav>
+		</div>
+		
+	</div>
+		
+	<div class="map-container">
+	<!--<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aed8e3a99d92e90d6c814ba5dec239000c52ae475eb5450aca5f9415a5e78e6ba&amp;source=constructor" width="1280" height="600" frameborder="0"></iframe>
+	-->
+	<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aed8e3a99d92e90d6c814ba5dec239000c52ae475eb5450aca5f9415a5e78e6ba&amp;width=100%&amp;height=600&amp;lang=ru_RU&amp;"></script>
+	</div>
+		
+		<iframe id="big_light_70000001059848980" frameborder="0" width="100%" height="950px" sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation" style="display: block; margin-left: auto; margin-right: auto;"></iframe><script type="text/javascript">((r,f)=>{const l=document.getElementById(r);l.contentWindow.document.open(),l.contentWindow.document.write(decodeURIComponent(escape(atob(f)))),l.contentWindow.document.close()})("big_light_70000001059848980", "PGhlYWQ+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPgogICAgd2luZG93Ll9fc2l6ZV9fPSdiaWcnOwogICAgd2luZG93Ll9fdGhlbWVfXz0nbGlnaHQnOwogICAgd2luZG93Ll9fYnJhbmNoSWRfXz0nJwogICAgd2luZG93Ll9fb3JnSWRfXz0nNzAwMDAwMDEwNTk4NDg5ODAnCiAgIDwvc2NyaXB0PjxzY3JpcHQgY3Jvc3NvcmlnaW49ImFub255bW91cyIgdHlwZT0ibW9kdWxlIiBzcmM9Imh0dHBzOi8vZGlzay4yZ2lzLmNvbS93aWRnZXQtY29uc3RydWN0b3IvYXNzZXRzL2lmcmFtZS5qcyI+PC9zY3JpcHQ+PGxpbmsgcmVsPSJtb2R1bGVwcmVsb2FkIiBjcm9zc29yaWdpbj0iYW5vbnltb3VzIiBocmVmPSJodHRwczovL2Rpc2suMmdpcy5jb20vd2lkZ2V0LWNvbnN0cnVjdG9yL2Fzc2V0cy9kZWZhdWx0cy5qcyI+PGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBjcm9zc29yaWdpbj0iYW5vbnltb3VzIiBocmVmPSJodHRwczovL2Rpc2suMmdpcy5jb20vd2lkZ2V0LWNvbnN0cnVjdG9yL2Fzc2V0cy9kZWZhdWx0cy5jc3MiPjwvaGVhZD48Ym9keT48ZGl2IGlkPSJpZnJhbWUiPjwvZGl2PjwvYm9keT4=")</script>
+		
+	</footer>	
+</body>
+</html>
