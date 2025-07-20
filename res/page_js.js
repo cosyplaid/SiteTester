@@ -26,9 +26,16 @@ window.addEventListener('load', function() {
 	},1000);
 });
 
+let ticking = false;
 
-window.addEventListener('scroll', function() 
-{
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    window.requestAnimationFrame(updateOnScroll);
+    ticking = true;
+  }
+});
+
+function updateOnScroll() {
     var scrollTop = window.scrollY;
     var windowHeight = window.innerHeight;
     var documentHeight = document.body.scrollHeight;
@@ -104,7 +111,89 @@ window.addEventListener('scroll', function()
 	marquee.style.left = `${-7 * headerScrollAmount}%`;
   
 	letter.style.transform = `rotate(${-rotateDeg}deg)`;
-});
+
+  ticking = false;
+}
+
+
+// window.addEventListener('scroll', function() 
+// {
+    // var scrollTop = window.scrollY;
+    // var windowHeight = window.innerHeight;
+    // var documentHeight = document.body.scrollHeight;
+
+    // // Процент прокрутки
+    // var scrollPercent = scrollTop / (documentHeight - windowHeight);
+
+    // // Смещение подложки
+    // t_line_background.style.transform = `translateY(${scrollPercent * 100}px)`; // Смещение на X px
+	// // Пример анимации: изменение прозрачности подложки
+    // //t_line_background.style.opacity = 1 - scrollPercent * .75; // Меняем прозрачность в зависимости от прокрутки
+
+    // // Пример анимации: изменение прозрачности тонировки
+    // tint.style.opacity = startTint + scrollPercent * 1.6; // Меняем прозрачность в зависимости от прокрутки
+  
+	// //line.style.opacity = startTint + scrollPercent * 1.6;
+  
+    // // Ограничитель значения скролла для logo
+	// const targetScrollAmount = 450;
+	// const startScrollAmount = 125;
+  
+	// const startLineGrowAmount = 480;
+	// const endLineGrowAmount = 250;
+	
+	// var headerScrollAmount = (scrollTop - 75) / 450;
+  	// var logoScrollAmount =(scrollTop - startScrollAmount) / targetScrollAmount;
+  
+	// var lineGrowAmount = (scrollTop - startLineGrowAmount) / endLineGrowAmount;
+  
+	// logoScrollAmount = Math.min(Math.max(logoScrollAmount, 0), 1);
+	
+	// headerScrollAmount = Math.min(Math.max(headerScrollAmount, 0), 1);
+		
+	// lineGrowAmount = Math.min(Math.max(lineGrowAmount, 0), 1);
+
+	// //console.log(logoScrollAmount);
+
+	// const maxHeight = 120; // Максимальный размер header.height в пикселях
+	// const minHeight = 80; // Минимальный размер header.height в пикселях
+
+	// // Расчет угла: от 0 до 45 в пределах logoScrollAmount
+	// const rotateDeg = logoScrollAmount * 45; // пропорционально
+
+	// // Расчет смещения квадрата относительно высоты header
+	// const squareYTranslate = header.offsetHeight - minHeight / 2 - 2;
+  
+	// let translateY = logoScrollAmount * squareYTranslate;
+	// let newHeight = maxHeight + (minHeight - maxHeight) * headerScrollAmount;
+
+	// //console.log(translateY);
+
+	// // Расчет изменения цвета тени
+	// const startColor = {r: 255, g: 154, b: 0}; //r: 255, g: 89, b: 0
+	// const endColor = {r: 255, g: 255, b: 255}; //rgb(255, 240, 196) 
+
+	// const r = Math.round(startColor.r + (endColor.r - startColor.r) * lineGrowAmount);
+	// const g = Math.round(startColor.g + (endColor.g - startColor.g) * lineGrowAmount);
+	// const b = Math.round(startColor.b + (endColor.b - startColor.b) * lineGrowAmount);
+
+	// // Формируем строку цвета с прозрачностью
+	// const colorStr = `rgba(${r}, ${g}, ${b}, 0.7)`;
+
+	// // Обновляем трансформацию (Квадрат, Буква Т, Шапка)
+	// header.style.height = `${newHeight}px`;
+	// square.style.transform = `translateY(${translateY}px) rotate(${rotateDeg}deg)`;
+  
+	// lineText.style.transform = `translateY(${translateY}px) scale(${1}, ${1-headerScrollAmount})`;
+  
+	// header.style.boxShadow = `0px 3px 20px ${colorStr}`;
+	// line.style.left = `${20 - 20*lineGrowAmount}%`;
+	// line.style.width = `${100*lineGrowAmount}%`;
+	// line.style.opacity = lineGrowAmount * 1.6;
+	// marquee.style.left = `${-7 * headerScrollAmount}%`;
+  
+	// letter.style.transform = `rotate(${-rotateDeg}deg)`;
+// });
 
 function scrollToContacts(event) {
   event.preventDefault(); // отменяем стандартное поведение
