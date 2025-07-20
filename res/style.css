@@ -148,7 +148,7 @@ body {
 #contact-container
 {
 	scroll-margin-top: 90px;
-	color: #ffe4c4;
+	color: #ffffff;
 	display: flex;
 	justify-content: center;
 	padding-top: 60px;
@@ -565,4 +565,3 @@ body {
 	width: 90%;
     padding-block: 20px;
 }
-
