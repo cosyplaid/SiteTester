@@ -78,7 +78,7 @@ window.addEventListener('scroll', function()
 	let translateY = logoScrollAmount * squareYTranslate;
 	let newHeight = maxHeight + (minHeight - maxHeight) * headerScrollAmount;
 
-	console.log(translateY);
+	//console.log(translateY);
 
 	// Расчет изменения цвета тени
 	const startColor = {r: 255, g: 154, b: 0}; //r: 255, g: 89, b: 0
