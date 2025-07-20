@@ -33,7 +33,8 @@ window.addEventListener('scroll', () => {
     window.requestAnimationFrame(updateOnScroll);
     ticking = true;
   }
-});
+}, { passive: true });
+
 
 function updateOnScroll() {
     var scrollTop = window.scrollY;
