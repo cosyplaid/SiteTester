@@ -10,10 +10,10 @@ body {
     background: #f0f0f0;
 }
 
-  /* Блокировка прокрутки */
+  /* Блокировка прокрутки 
   body.no-scroll {
     overflow: hidden;
-  }
+  } */
 
   #loader {
     display: flex;
