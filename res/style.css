@@ -156,7 +156,7 @@ body {
 }
 
 .map-container {
-	width: 96%;
+	width: 90%;
 	margin-bottom: 20px;
     position: relative;
     border-radius: 15px;
@@ -562,7 +562,7 @@ body {
 
 #big_light_70000001059848980
 {
-	width: 95%;
-    padding: 20px;
+	width: 90%;
+    padding-block: 20px;
 }
 
