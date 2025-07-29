@@ -4,11 +4,7 @@ const lineText = document.querySelector('.line-text');
 const letter = document.querySelector('.letter');
 const magicLine = document.querySelector('.line-magic');
 
-const scrollThreshold = 550; // порог в пикселях
-
-
-
-
+const scrollThreshold = 600; // порог в пикселях
 
 const marquee = document.querySelector('.marquee');
 const loader = document.getElementById('loader');
@@ -91,24 +87,6 @@ function updateOnScroll() {
 
     // Пример анимации: изменение прозрачности тонировки
     tint.style.opacity = startTint + scrollPercent * 1.6; // Меняем прозрачность в зависимости от прокрутки
-  
-    // Ограничитель значения скролла для logo
-		const targetScrollAmount = 450;
-		const startScrollAmount = 125;
-  
-		const startLineGrowAmount = 480;
-		const endLineGrowAmount = 250;
-	
- 	 	var logoScrollAmount =(scrollTop - startScrollAmount) / targetScrollAmount;
-  
-		var lineGrowAmount = (scrollTop - startLineGrowAmount) / endLineGrowAmount;
-  
-		logoScrollAmount = Math.min(Math.max(logoScrollAmount, 0), 1);
-		
-		lineGrowAmount = Math.min(Math.max(lineGrowAmount, 0), 1);
-
-		// Расчет угла: от 0 до 45 в пределах logoScrollAmount
-		const rotateDeg = logoScrollAmount * 45; // пропорционально
 
 	//marquee.style.left = `${-7 * headerScrollAmount}%`;
 
