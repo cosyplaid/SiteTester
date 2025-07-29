@@ -26,6 +26,13 @@ window.addEventListener('load', function() {
 	},1000);
 });
 
+  function closeMenu() {
+    // Получаем чекбокс по ID
+    const checkbox = document.getElementById('burger-checkbox');
+    // Устанавливаем его значение в false (unchecked)
+    checkbox.checked = false;
+  }
+
 let ticking = false;
 
 window.addEventListener('scroll', () => {

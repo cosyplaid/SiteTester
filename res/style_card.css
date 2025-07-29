@@ -1,31 +1,29 @@
 .direction-pc
 {
-	gap: 20px;
     display: flex;
     position: relative;
     justify-content: center;
-	padding-bottom: 50px;
-}
-
-@media (max-width: 959px) {
-	.direction-pc {
-		display: block;
-        justify-items: center;
-  }
+    padding-bottom: 20px;
+    color: #ffffff;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .direction-card {
-  position: relative;
-  width: 400px;
-  height: 300px;
-  background: linear-gradient(-45deg, #ff2b2b 0%, #ffb13a 80%);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  transition: all 0.35s ease;
-  margin: 20px;
+    position: relative;
+    width: 400px;
+    height: 300px;
+    background: linear-gradient(-45deg, #ff2b2b 0%, #ffb13a 80%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.35s ease;
+    margin: 20px;
 }
 
 .direction-card svg {
