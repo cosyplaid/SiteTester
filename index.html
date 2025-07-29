@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html> 
+<html lang="ru">
 <head> 
 	<meta content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -20,12 +20,13 @@
 	<meta name="format-detection" content="telephone=no" /> 
 	<meta http-equiv="x-dns-prefetch-control" content="on"> 
 	
-	<link rel="stylesheet" type="text/css" href="res/style.css">	
-	<link rel="stylesheet" type="text/css" href="res/card-styles.css">	
-	<link rel="stylesheet" type="text/css" href="res/header-styles.css">		
+	<link rel="stylesheet" type="text/css" href="res/style.css" fetchpriority="high">	
+	<link rel="stylesheet" type="text/css" href="res/header-styles.css" fetchpriority="high">		
 </head>
 
 <body class="no-scroll">
+
+<link rel="stylesheet" type="text/css" href="res/card-styles.css">	
 
 <!-- Загрузочный экран-->
 <div id="loader">
@@ -71,8 +72,6 @@
     </ul>
 
 </div>
-
-
 </div>
 
 	<div class="line-bottom" id="line"></div>
@@ -86,12 +85,12 @@
 	
 	<div class="carousel">
 		<div class="slides" id="slides">
-			<div class="slide"><img src="res/biju_certificates.webp" alt="Фото1"></div>
-			<div class="slide"><img src="res/vnezak.webp" alt="Фото2"></div>
-			<div class="slide"><img src="res/yarche_banner.webp" alt="Фото3"></div>
-			<div class="slide"><img src="res/boo_samples.webp" alt="Фото4"></div>
-			<div class="slide"><img src="res/vnz_stickers.webp" alt="Фото5"></div>
-			<div class="slide"><img src="res/starsMasters_banner.webp" alt="Фото6"></div>	
+			<div class="slide"><img src="res/biju_certificates.webp" alt="Фото1" fetchpriority="high"></div>
+			<div class="slide"><img src="res/vnezak.webp" alt="Фото2" loading="lazy" fetchpriority="high"></div>
+			<div class="slide"><img src="res/yarche_banner.webp" alt="Фото3" loading="lazy"></div>
+			<div class="slide"><img src="res/boo_samples.webp" alt="Фото4" loading="lazy"></div>
+			<div class="slide"><img src="res/vnz_stickers.webp" alt="Фото5" loading="lazy"></div>
+			<div class="slide"><img src="res/starsMasters_banner.webp" alt="Фото6" loading="lazy"></div>	
 		</div>	
 		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -272,12 +271,12 @@
 	</div>
 		
 	<div class="map-container">
-	<!--<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aed8e3a99d92e90d6c814ba5dec239000c52ae475eb5450aca5f9415a5e78e6ba&amp;source=constructor" width="1280" height="600" frameborder="0"></iframe>
-	-->
-	<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aed8e3a99d92e90d6c814ba5dec239000c52ae475eb5450aca5f9415a5e78e6ba&amp;width=100%&amp;height=600&amp;lang=ru_RU&amp;"></script>
+	<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aed8e3a99d92e90d6c814ba5dec239000c52ae475eb5450aca5f9415a5e78e6ba&amp;source=constructor" title="yandex-map" style="display: block; margin-left: auto; margin-right: auto; width: 100%; height: 600px;"></iframe>
+	
+	<!--<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aed8e3a99d92e90d6c814ba5dec239000c52ae475eb5450aca5f9415a5e78e6ba&amp;width=100%&amp;height=600&amp;lang=ru_RU&amp;"></script>-->
 	</div>
 		
-	<iframe id="big_light_70000001059848980" frameborder="0" height="950px" sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation" style="display: block; margin-left: auto; margin-right: auto;"></iframe><script type="text/javascript">((r,f)=>{const l=document.getElementById(r);l.contentWindow.document.open(),l.contentWindow.document.write(decodeURIComponent(escape(atob(f)))),l.contentWindow.document.close()})("big_light_70000001059848980", "PGhlYWQ+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPgogICAgd2luZG93Ll9fc2l6ZV9fPSdiaWcnOwogICAgd2luZG93Ll9fdGhlbWVfXz0nbGlnaHQnOwogICAgd2luZG93Ll9fYnJhbmNoSWRfXz0nJwogICAgd2luZG93Ll9fb3JnSWRfXz0nNzAwMDAwMDEwNTk4NDg5ODAnCiAgIDwvc2NyaXB0PjxzY3JpcHQgY3Jvc3NvcmlnaW49ImFub255bW91cyIgdHlwZT0ibW9kdWxlIiBzcmM9Imh0dHBzOi8vZGlzay4yZ2lzLmNvbS93aWRnZXQtY29uc3RydWN0b3IvYXNzZXRzL2lmcmFtZS5qcyI+PC9zY3JpcHQ+PGxpbmsgcmVsPSJtb2R1bGVwcmVsb2FkIiBjcm9zc29yaWdpbj0iYW5vbnltb3VzIiBocmVmPSJodHRwczovL2Rpc2suMmdpcy5jb20vd2lkZ2V0LWNvbnN0cnVjdG9yL2Fzc2V0cy9kZWZhdWx0cy5qcyI+PGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBjcm9zc29yaWdpbj0iYW5vbnltb3VzIiBocmVmPSJodHRwczovL2Rpc2suMmdpcy5jb20vd2lkZ2V0LWNvbnN0cnVjdG9yL2Fzc2V0cy9kZWZhdWx0cy5jc3MiPjwvaGVhZD48Ym9keT48ZGl2IGlkPSJpZnJhbWUiPjwvZGl2PjwvYm9keT4=")</script>
+	<iframe id="big_light_70000001059848980" title="ratings" frameborder="0" height="950px" sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation" style="display: block; margin-left: auto; margin-right: auto;"></iframe><script type="text/javascript">((r,f)=>{const l=document.getElementById(r);l.contentWindow.document.open(),l.contentWindow.document.write(decodeURIComponent(escape(atob(f)))),l.contentWindow.document.close()})("big_light_70000001059848980", "PGhlYWQ+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPgogICAgd2luZG93Ll9fc2l6ZV9fPSdiaWcnOwogICAgd2luZG93Ll9fdGhlbWVfXz0nbGlnaHQnOwogICAgd2luZG93Ll9fYnJhbmNoSWRfXz0nJwogICAgd2luZG93Ll9fb3JnSWRfXz0nNzAwMDAwMDEwNTk4NDg5ODAnCiAgIDwvc2NyaXB0PjxzY3JpcHQgY3Jvc3NvcmlnaW49ImFub255bW91cyIgdHlwZT0ibW9kdWxlIiBzcmM9Imh0dHBzOi8vZGlzay4yZ2lzLmNvbS93aWRnZXQtY29uc3RydWN0b3IvYXNzZXRzL2lmcmFtZS5qcyI+PC9zY3JpcHQ+PGxpbmsgcmVsPSJtb2R1bGVwcmVsb2FkIiBjcm9zc29yaWdpbj0iYW5vbnltb3VzIiBocmVmPSJodHRwczovL2Rpc2suMmdpcy5jb20vd2lkZ2V0LWNvbnN0cnVjdG9yL2Fzc2V0cy9kZWZhdWx0cy5qcyI+PGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBjcm9zc29yaWdpbj0iYW5vbnltb3VzIiBocmVmPSJodHRwczovL2Rpc2suMmdpcy5jb20vd2lkZ2V0LWNvbnN0cnVjdG9yL2Fzc2V0cy9kZWZhdWx0cy5jc3MiPjwvaGVhZD48Ym9keT48ZGl2IGlkPSJpZnJhbWUiPjwvZGl2PjwvYm9keT4=")</script>
 		
 	</footer>	
 </body>
