@@ -1,3 +1,27 @@
+/*Бегущая строка*/
+.marquee {
+  left: 0%;
+  width: 420px;
+  height: 64px; 
+  position: relative;
+  /* overflow: hidden; */
+  transition: .3s;
+  
+  align-items: center;
+  display: flex;
+}
+
+.scroll-text {
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 32px;
+}
+
+
   /* Блок справа: меню и кнопка */
   .right-section {
     display: flex;
@@ -153,5 +177,11 @@
 
   #menu-container-mobile{
     display: block;
+  }
+}
+
+@media (max-width: 1080px){
+  .marquee{
+    display: none;
   }
 }

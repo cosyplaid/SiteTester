@@ -255,41 +255,12 @@ body {
 	opacity: 0;
 }
 
-  /*Бегущая строка*/
-.marquee {
-	left: 0%;
-	width: 420px;
-    height: 64px;	
-	position: relative;
-    /* overflow: hidden; */
-    transition: .3s;
-	
-	align-items: center;
-    display: flex;
-}
-
-.text {
-	color: aliceblue;
-	padding: 0 50px; /* отступы между текстами */
-	font-size: 24px;
-}
-
-.scroll-text {
-    color: #ffffff;
-	font-weight: bold;
-    text-align: center;
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    font-size: 32px;
-}
-
 .logo
 {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;	
-	border-radius: 15px;
+	 border-radius: 15px;
 }
 
 
