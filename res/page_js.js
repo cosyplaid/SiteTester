@@ -80,6 +80,8 @@ function updateOnScroll() {
     magicLine.classList.remove('scrolled');
   }
 
+  // Типо ПК
+if (window.innerWidth >= 1024) {
     // Смещение подложки
     t_line_background.style.transform = `translateY(${scrollPercent * 100}px)`; // Смещение на X px
 		// Пример анимации: изменение прозрачности подложки
@@ -87,7 +89,7 @@ function updateOnScroll() {
 
     // Пример анимации: изменение прозрачности тонировки
     tint.style.opacity = startTint + scrollPercent * 1.6; // Меняем прозрачность в зависимости от прокрутки
-
+}
 	//marquee.style.left = `${-7 * headerScrollAmount}%`;
 
   ticking = false;
