@@ -198,9 +198,10 @@
 </div>
 
 	<div class="line-bottom" id="line"></div>
+
 	</div>
 		
-    <script src="res/page_js.js"></script>
+  <script src="res/page_js.js"></script>
 	
 	<footer class="footer">
 	
@@ -279,5 +280,62 @@
 	<iframe id="big_light_70000001059848980" title="ratings" frameborder="0" height="950px" sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation" style="display: block; margin-left: auto; margin-right: auto;"></iframe><script type="text/javascript">((r,f)=>{const l=document.getElementById(r);l.contentWindow.document.open(),l.contentWindow.document.write(decodeURIComponent(escape(atob(f)))),l.contentWindow.document.close()})("big_light_70000001059848980", "PGhlYWQ+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPgogICAgd2luZG93Ll9fc2l6ZV9fPSdiaWcnOwogICAgd2luZG93Ll9fdGhlbWVfXz0nbGlnaHQnOwogICAgd2luZG93Ll9fYnJhbmNoSWRfXz0nJwogICAgd2luZG93Ll9fb3JnSWRfXz0nNzAwMDAwMDEwNTk4NDg5ODAnCiAgIDwvc2NyaXB0PjxzY3JpcHQgY3Jvc3NvcmlnaW49ImFub255bW91cyIgdHlwZT0ibW9kdWxlIiBzcmM9Imh0dHBzOi8vZGlzay4yZ2lzLmNvbS93aWRnZXQtY29uc3RydWN0b3IvYXNzZXRzL2lmcmFtZS5qcyI+PC9zY3JpcHQ+PGxpbmsgcmVsPSJtb2R1bGVwcmVsb2FkIiBjcm9zc29yaWdpbj0iYW5vbnltb3VzIiBocmVmPSJodHRwczovL2Rpc2suMmdpcy5jb20vd2lkZ2V0LWNvbnN0cnVjdG9yL2Fzc2V0cy9kZWZhdWx0cy5qcyI+PGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBjcm9zc29yaWdpbj0iYW5vbnltb3VzIiBocmVmPSJodHRwczovL2Rpc2suMmdpcy5jb20vd2lkZ2V0LWNvbnN0cnVjdG9yL2Fzc2V0cy9kZWZhdWx0cy5jc3MiPjwvaGVhZD48Ym9keT48ZGl2IGlkPSJpZnJhbWUiPjwvZGl2PjwvYm9keT4=")</script>
 		
 	</footer>	
+
+<div id="cookie-banner">
+  <p>Этот сайт использует файлы cookie для улучшения пользовательского опыта.  Продолжая использовать сайт, вы соглашаетесь с нашей <a href="#">политикой конфиденциальности</a>.</p>
+  <button id="accept-cookies">Принять</button>
+  <button id="reject-cookies">Отклонить</button>
+</div>
+
+<script>
+    checkCookieConsent(); // Проверка при загрузке страницы
+	
+  function checkCookieConsent() {
+    const consent = getCookie("cookie_consent");
+    if (consent === "") {
+      showCookieBanner();
+    }
+  }
+
+  function showCookieBanner() {
+    document.getElementById("cookie-banner").style.display = "block";
+  }
+
+  function hideCookieBanner() {
+    document.getElementById("cookie-banner").style.display = "none";
+  }
+
+  function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+      const date = new Date();
+      date.setTime(date.getTime() + (days*24*60*60*1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+  }
+
+  function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) === ' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length,c.length);
+    }
+    return "";
+  }
+
+  document.getElementById("accept-cookies").addEventListener("click", function() {
+    setCookie("cookie_consent", "accepted", 365);
+    hideCookieBanner();
+  });
+
+  document.getElementById("reject-cookies").addEventListener("click", function() {
+    setCookie("cookie_consent", "rejected", 365);
+    hideCookieBanner();
+  });
+</script>
+
 </body>
 </html>
