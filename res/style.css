@@ -87,10 +87,9 @@ body {
 
 .text-holder
 {
-	flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .text-about
@@ -113,6 +112,9 @@ body {
 }
 
 @media(max-width: 720px){
+.text-about{
+  font-size: 35px;
+}
   .text-about.history
 {
   width: 90%;
@@ -252,20 +254,6 @@ body {
 	background-color: #fff;
 	opacity: 0;
 }
-
-  /* Блок справа: меню и кнопка */
-  .right-section {
-    display: flex;
-    align-items: center;
-    /*gap: 20px;  промежуток между элементами */
-  }
-.header-href-navigation {
-    color: #ffffff; /* белый цвет текста */
-    text-decoration: none;
-    font-weight: bold;
-	font-size: 18px; 
-  }
-
 
   /*Бегущая строка*/
 .marquee {
@@ -416,10 +404,10 @@ body {
     box-sizing: border-box;
     display: flex;
     justify-content: center; */
-	display: flex;
-	padding: 50px 50px;
-	color: #ffe4c4;
-	justify-content: center;
+    display: flex;
+    padding: 30px 50px;
+    color: #ffe4c4;
+    justify-content: center;
 }
 
 .social-links
@@ -445,12 +433,12 @@ body {
 
 /* From Uiverse.io by vinodjangid07 */ 
 .card {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+    /*width: fit-content; */
+    /* height: fit-content; */
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    gap: 20px;
 }
 
 /* for all social containers*/

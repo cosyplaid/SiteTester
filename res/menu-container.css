@@ -1,3 +1,16 @@
+  /* Блок справа: меню и кнопка */
+  .right-section {
+    display: flex;
+    align-items: center;
+    /*gap: 20px;  промежуток между элементами */
+  }
+.header-href-navigation {
+    color: #ffffff; /* белый цвет текста */
+    text-decoration: none;
+    font-weight: bold;
+  font-size: 18px; 
+  }
+
 /* From Uiverse.io by ernestnash */ 
 .slide-btn {
  display: inline-block;
@@ -13,6 +26,7 @@
  overflow: hidden;
  z-index: 1;
  font-family: inherit;
+  min-width: 130px;
  /* border-radius: 0.4em; */
 }
 
@@ -94,24 +108,32 @@
   transform: rotate(-45deg);
   transition: bottom .3s, transform .3s .15s;
 }
+
+#menu-container-mobile{
+      display: none;
+}
+
 .menu-container-mobile-list {
-    top: 80px;
+    /* padding: 20px; */
+    /* top: 80px; */
     right: 0;
     position: absolute;
-    display: grid;
+    /* display: flex; */
     gap: 5px;
     padding-top: 50px;
     padding-inline: 10px;
     margin: 0;
-    background: #000000;
+    background: #040404;
     list-style-type: none;
     transform: translateX(+100%);
     transition: .3s;
-    width: 200px;
+    width: 40%;
+    height: 100vh;
 }
 .menu-container-mobile-item {
     display: block;
     padding: 15px;
+    margin: 10px;
     color: white;
     font-size: 24px;
     text-align: center;
@@ -122,4 +144,14 @@
 }
 .burger-checkbox:checked ~ .menu-container-mobile-list {
   transform: translateX(0);
+}
+
+@media(max-width: 720px){
+  #header-navigation{
+    display: none;
+  }
+
+  #menu-container-mobile{
+    display: block;
+  }
 }
