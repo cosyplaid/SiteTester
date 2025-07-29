@@ -1,3 +1,116 @@
+  /* Общие стили для шапки */
+.header {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  background-color: #040404;
+  height: 120px;
+  transition-property: box-shadow;  
+  transition: all 0.4s ease;    
+  
+  top: 0;
+    
+  box-shadow: 0px 3px 20px rgb(255 154 0 / 70%); /* 255, 154, 0  255 89 0*/
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12%;
+  box-sizing: border-box;
+}
+
+/* Блок с логотипом и текстом */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Квадрат */
+.square {
+  width: 70px;
+  height: 70px;
+  background-color: #FF9A00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 98; 
+  transition-property: box-shadow;
+  transition: all .5s ease;
+}
+
+/* Внутренний элемент с буквой */
+.letter {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 50px;
+  transition: all .7s ease;
+}
+
+/* Надпись Line */
+.line-text {
+  font-weight: bold;
+  margin-left: 10px;
+  font-size:50px; 
+  color: #ffffff;
+  transition: all .5s ease;
+}
+
+/* Линия, которая появляется вместо текста */
+.line-magic {
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 20%;
+  width: 0%;
+  background-color: #fff;
+  opacity: 0;
+
+  transition: all .25s ease;
+}
+
+  /*line.style.left = `${20 - 20*lineGrowAmount}%`;
+  line.style.width = `${100*lineGrowAmount}%`;
+  line.style.opacity = lineGrowAmount * 1.6;*/
+
+.line-magic.scrolled
+{
+  width: 100%;
+  opacity: 1;
+  left: 0%;
+  transition: all .5s ease 0.25s;
+}
+
+.header.scrolled 
+{
+  height:80px;
+  box-shadow: 0px 3px 20px rgb(255 255 255 / 70%);
+}
+
+.square.scrolled 
+{
+  transform: translate(0px, 40px) rotate(45deg);
+}
+
+.line-text.scrolled 
+{
+  transform: translate(0px, 40px) scale(1, 0);
+    transition: all .75s ease;
+}
+
+.letter.scrolled {
+  transform: rotate(-45deg);
+}
+
+/* Линия */
+.line-up{
+  position: absolute;
+  height: 2px;
+  top: 0;
+    left: 0%;
+    width: 100%;
+  background-color: #FF9A00;
+}
+
 /*Бегущая строка*/
 .marquee {
   left: 0%;

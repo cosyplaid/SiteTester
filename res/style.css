@@ -52,39 +52,6 @@ body {
     display: none;
   }
 
-  /* Общие стили для шапки */
-.header {
-	position: fixed;
-	z-index: 99;
-	width: 100%;
-	background-color: #040404;
-	height: 120px;
-	transition-property: box-shadow;	
-	transition: all 0.1s ease;		
-	
-	top: 0;
-		
-	box-shadow: 0px 3px 20px rgb(255 154 0 / 70%); /* 255, 154, 0  255 89 0*/
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 12%;
-    box-sizing: border-box;
-}
-
-/*@media (min-width: 720px) and (max-width: 2500px) {
-    .header-container {
-		width: 100%;
-    }
-}
-
-@media (min-width: 540px) and (max-width: 539px) {
-    .header-container {
-        max-width: 10px;
-    }
-}*/
-
 .text-holder
 {
     display: flex;
@@ -180,12 +147,6 @@ body {
   align-items: center;
 }
 
-  /* Блок с логотипом и текстом */
-  .logo-container {
-    display: flex;
-    align-items: center;
-  }
-
 .info-icon{
 	fill: none;
   stroke: #FF9A00;
@@ -193,46 +154,6 @@ body {
 
 .info-text{
       font-size: 20px;
-}
-
-/* Квадрат */
-.square {
-  width: 70px;
-  height: 70px;
-  background-color: #FF9A00;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 98; 
-  transition-property: box-shadow;
-  transition: all 0.1s ease;
-}
-
-/* Внутренний элемент с буквой */
-.letter {
-	color: #ffffff;
-	font-weight: bold;
-	font-size: 50px;
-	transition: all 0.1s ease;
-}
-
-/* Надпись Line */
-.line-text {
-	font-weight: bold;
-    margin-left: 10px;
-    font-size:50px; 
-    color: #ffffff;
-    transition: all 0.1s ease;
-}
-
-/* Линия */
-.line-up{
-	position: absolute;
-	height: 2px;
-	top: 0;
-    left: 0%;
-    width: 100%;
-	background-color: #FF9A00;
 }
 
 .line-bottom{
@@ -244,54 +165,18 @@ body {
 	background-color: #FF9A00;
 }
 
-/* Линия, которая появляется вместо текста */
-.line-line {
-	position: absolute;
-	height: 2px;
-	bottom: 0;
-    left: 0%;
-    width: 100%;
-	background-color: #fff;
-	opacity: 0;
-}
-
-.logo
-{
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;	
-	 border-radius: 15px;
-}
-
-
-.t-line-background {
-	position: relative;
-	top: 0%;
-    height: calc(var(--vh, 1vh)* 100);
-	max-height: 800px;
-    overflow: hidden;
-    width: 100%;
-	background: url('9_Work.jpg') no-repeat center center;
-    color: #fff;
-	background-size: cover;
-	   
-    transition: transform .2s ease;
-    z-index: -2; /* Подложка под содержимым */
-	/* clip-path: inset(50px 0 0 0); /* Маскирование: верх 50px скрыт */
-}
-
 .tint {
 	position: absolute;
-    display: flex;
+  display: flex;
 	top: 0%;	
-    height: calc(var(--vh, 1vh)* 100);
+  height: calc(var(--vh, 1vh)* 100);
 	max-height: 800px;
-    overflow: hidden;
-    width: 100%;
+  overflow: hidden;
+  width: 100%;
 	background-color: #111111;
 
-    transition: transform .2s ease;
-    z-index: 1;
+  transition: transform .2s ease;
+  z-index: 1;
 	pointer-events: none;
 }
 
@@ -304,8 +189,6 @@ body {
   color: white;
 	background: #111111;
 }
-
-
 
 .carousel-container {
   position: relative;
@@ -384,32 +267,32 @@ body {
 .social-links
 {
 	gap: 20px;
-    max-width: 1000px;
-    color: #ffe4c4;
+  max-width: 1000px;
+  color: #ffe4c4;
 	display: flex;
 }
 
 .social-link
 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border: 1px solid;
-    border-radius: 50%;
-    color: inherit;
-    /* cursor: pointer; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid;
+  border-radius: 50%;
+  color: inherit;
+  /* cursor: pointer; */
 }
 
 /* From Uiverse.io by vinodjangid07 */ 
 .card {
-    /*width: fit-content; */
-    /* height: fit-content; */
-    display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
-    gap: 20px;
+  /*width: fit-content; */
+  /* height: fit-content; */
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  gap: 20px;
 }
 
 /* for all social containers*/
