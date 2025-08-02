@@ -45,19 +45,6 @@ window.addEventListener('scroll', () => {
   }
 }, { passive: true });
 
-
-// в CSS объявить переменную :root {--scroll-percentage: 0;}
-
-//window.addEventListener('scroll', () => {
-//  window.requestAnimationFrame(() => {
-//    const scrollTop = window.scrollY;
-//    const documentHeight = document.body.scrollHeight;
-//    const windowHeight = window.innerHeight;
-//    const scrollPercent = scrollTop / (documentHeight - windowHeight);
-//    document.documentElement.style.setProperty('--scroll-percentage', scrollPercent);
-//  });
-//});
-
 function updateOnScroll() {
     var scrollTop = window.scrollY;
     var windowHeight = window.innerHeight;
@@ -126,53 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-const slides = document.getElementById('slides');
-const dotsContainer = document.getElementById('dotsContainer');
-
-//const dotsContainer = carousel.querySelector('.nav-dots');
-
-const imagesCount = slides.children.length; // количество изображений
-let currentIndex = 0;
-
-// Создаем кружки навигации
-for (let i = 0; i < imagesCount; i++) {
-	const dot = document.createElement('span');
-	dot.className = 'dot';
-	if (i === currentIndex) dot.classList.add('active');
-	dot.dataset.index = i; // сохраняем индекс
-	dotsContainer.appendChild(dot);
-}
-
-// Обработчик клика по кружкам
-dotsContainer.addEventListener('click', (e) => {
-	if (e.target.classList.contains('dot')) {
-		const index = parseInt(e.target.dataset.index);
-		goToSlide(index);
-	}
-});
-
-// Функция для переключения слайдов
-function goToSlide(index) {
-	currentIndex = index;
-	const offset = -index * 100 + '%';
-	slides.style.transform = `translateX(${offset})`;
-	updateDots();
-}
-
-// Обновление активных кружков
-function updateDots() {
-	const dots = document.querySelectorAll('.dot');
-	dots.forEach((dot, i) => {
-		dot.classList.toggle('active', i === currentIndex);
-	});
-}
-
-// Автоматическая смена слайдов (по желанию)
-let autoSlideInterval = setInterval(() => {
-	let nextIndex = (currentIndex +1) % imagesCount;
-	goToSlide(nextIndex);
-},5000); // смена каждые 5 секунд
-
 // Остановка автоматической смены при наведении (по желанию)
 // document.querySelector('.carousel').addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
 // document.querySelector('.carousel').addEventListener('mouseleave', () => {
@@ -234,3 +174,102 @@ function startAnimation() {
 }
 
 startAnimation();
+
+//NEW SLIDER
+const slidesContainer = document.getElementById('slides');
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+const dotsContainer = document.getElementById('dotsContainer');
+
+let currentIndex = 0;
+
+// Создаем точки
+for(let i=0; i<slides.length; i++) {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if(i===0) dot.classList.add('active');
+    dot.dataset.index = i; // сохраняем индекс
+    dotsContainer.appendChild(dot);
+}
+
+// Обновление отображения
+function updateSlide() {
+    const offset = -currentIndex *100 + '%';
+    slidesContainer.style.transform = `translateX(${offset})`;
+    
+    // Обновляем точки
+    document.querySelectorAll('.dot').forEach((dot,i) => {
+        dot.classList.toggle('active', i===currentIndex);
+    });
+}
+
+// Перелистывание вперед
+nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex +1) % slides.length;
+    updateSlide();
+});
+
+// Перелистывание назад
+prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex -1 + slides.length) % slides.length;
+    updateSlide();
+});
+
+// Клики по точкам
+document.querySelectorAll('.dot').forEach(dot => {
+    dot.addEventListener('click', () => {
+        currentIndex= parseInt(dot.dataset.index);
+        updateSlide();
+    });
+});
+
+// Свайп (на мобильных и ПК)
+let startX = null;
+
+slidesContainer.addEventListener('touchstart', (e) => {
+    startX= e.touches[0].clientX;
+});
+
+slidesContainer.addEventListener('touchend', (e) => {
+    if(startX===null) return;
+
+    const endX= e.changedTouches[0].clientX;
+
+    const deltaX= endX - startX;
+
+    if(Math.abs(deltaX)>50){ // порог свайпа
+        if(deltaX>0){
+            // свайп вправо - предыдущий слайд
+            currentIndex= (currentIndex -1 + slides.length)%slides.length;
+        } else{
+            // свайп влево - следующий слайд
+            currentIndex= (currentIndex +1)%slides.length;
+        }
+        updateSlide();
+    }
+    startX=null; 
+});
+
+// Также можно добавить поддержку мыши для "свайпа"
+let isDragging=false;
+
+slidesContainer.addEventListener('mousedown', (e)=>{
+    isDragging=true;
+    startX=e.clientX;
+});
+slidesContainer.addEventListener('mouseup', (e)=>{
+    if(!isDragging) return;
+
+    const deltaX= e.clientX - startX;
+
+    if(Math.abs(deltaX)>50){
+        if(deltaX>0){
+            currentIndex= (currentIndex -1 + slides.length)%slides.length; 
+        } else{
+            currentIndex= (currentIndex +1)%slides.length; 
+        }
+        updateSlide();
+    }
+    isDragging=false; 
+});
