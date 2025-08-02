@@ -60,6 +60,7 @@ body {
     width: 90%;
     height: auto;
     font-size: 32px;
+    font-weight: bold;
     /* padding-inline: 20px;*/
 }
 
@@ -129,6 +130,7 @@ body {
   width: 400px;
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 .info-icon{
