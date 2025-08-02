@@ -141,18 +141,19 @@
     align-items: center;
     /*gap: 20px;  промежуток между элементами */
   }
+
 .header-href-navigation {
     color: #ffffff; /* белый цвет текста */
     text-decoration: none;
     font-weight: bold;
-  font-size: 18px; 
-  }
+    font-size: 20px; 
+}
 
 /* From Uiverse.io by ernestnash */ 
 .slide-btn {
  display: inline-block;
  padding: 10px 15px;
- font-size: 18px;
+ font-size: 20px;
  font-weight: 600;
  color: #ffffff;
  border: 3px solid #FF9A00;
@@ -163,7 +164,8 @@
  overflow: hidden;
  z-index: 1;
  font-family: inherit;
-  min-width: 130px;
+ /* min-width: 130px;*/
+  width: max-content;
  /* border-radius: 0.4em; */
 }
 
@@ -283,18 +285,28 @@
   transform: translateX(0);
 }
 
-@media(max-width: 720px){
+@media screen and (min-width: 1080px) and (max-width: 1300px) {
+  .header-href-navigation {
+    font-size: 18px; 
+  }
+  .slide-btn {
+    font-size: 18px; 
+  }
+}
+
+
+@media screen and (max-width: 1080px){
+  .marquee{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 720px){
   #header-navigation{
     display: none;
   }
 
   #menu-container-mobile{
     display: block;
-  }
-}
-
-@media (max-width: 1080px){
-  .marquee{
-    display: none;
   }
 }
