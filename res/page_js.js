@@ -4,10 +4,16 @@ const lineText = document.querySelector('.line-text');
 const letter = document.querySelector('.letter');
 const magicLine = document.querySelector('.line-magic');
 
-const scrollThreshold = 600; // порог в пикселях
+const scrollThreshold = 200; // порог в пикселях
 
 const marquee = document.querySelector('.marquee');
 const loader = document.getElementById('loader');
+
+const slidesContainer = document.getElementById('slides');
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+const dotsContainer = document.getElementById('dotsContainer');
 
 // Тонировочка
 var t_line_background = document.querySelector('.carousel');
@@ -176,13 +182,67 @@ function startAnimation() {
 startAnimation();
 
 //NEW SLIDER
-const slidesContainer = document.getElementById('slides');
-const slides = document.querySelectorAll('.slide');
-const prevBtn = document.getElementById('prev');
-const nextBtn = document.getElementById('next');
-const dotsContainer = document.getElementById('dotsContainer');
 
 let currentIndex = 0;
+
+let activeImage = null; // текущий "следящий" элемент
+let isDraggingImage = false;
+let startXImage = 0;
+let startYImage = 0;
+
+// Обработчики для всего документа, чтобы следить за движением
+document.addEventListener('mousedown', (e) => {
+    // Проверяем, если клик по изображению
+    const targetImg = e.target.closest('img');
+    if(targetImg && targetImg.parentElement.classList.contains('slide')){
+        activeImage = targetImg;
+        isDraggingImage = true;
+        startXImage = e.clientX - activeImage.offsetLeft;
+        startYImage = e.clientY - activeImage.offsetTop;
+        // Можно отключить переходы для плавности
+        activeImage.style.transition = 'none';
+        // Меняем курсор
+        activeImage.style.cursor='grabbing';
+    }
+});
+
+document.addEventListener('mousemove', (e) => {
+    if(isDraggingImage && activeImage){
+        // Обновляем позицию изображения
+        const newLeft = e.clientX - startXImage;
+        const newTop = e.clientY - startYImage;
+        activeImage.style.left = `${newLeft}px`;
+        activeImage.style.top = `${newTop}px`;
+    }
+});
+
+// Аналогично для мобильных устройств с touch-событиями:
+document.addEventListener('touchstart', (e) => {
+    const touchTarget=e.target.closest('img');
+    if(touchTarget && touchTarget.parentElement.classList.contains('slide')){
+        activeImage=touchTarget;
+        isDraggingImage=true;
+        startXImage= e.touches[0].clientX - activeImage.offsetLeft;
+        startYImage= e.touches[0].clientY - activeImage.offsetTop;
+        activeImage.style.transition='none';
+    }
+});
+
+document.addEventListener('touchmove', (e) => {
+    if(isDraggingImage && activeImage){
+        const newLeft= e.touches[0].clientX - startXImage;
+        const newTop= e.touches[0].clientY - startYImage;
+        activeImage.style.left=`${newLeft}px`;
+        activeImage.style.top=`${newTop}px`;
+    }
+});
+
+document.addEventListener('touchend', () => {
+    if(isDraggingImage && activeImage){
+        isDraggingImage=false;
+        activeImage.style.transition='all 0.2s ease';
+    }
+});
 
 // Создаем точки
 for(let i=0; i<slides.length; i++) {
