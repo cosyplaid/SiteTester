@@ -246,7 +246,7 @@ body {
 .socialContainer {
 	width: 52px;
 	height: 52px;
-	background-color: rgb(44, 44, 44);
+	background-color: rgb(40, 40, 40);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -293,6 +293,58 @@ body {
 .socialContainer:hover .socialSvg {
   animation: slide-in-top 0.3s both;
 }
+  /* Отключить hover-эффекты */
+
+@media (hover: none) and (pointer: coarse) {
+  .containerOne:hover,
+  .containerTwo:hover,
+  .containerThree:hover,
+  .containerFour:hover,
+  .containerFive:hover {
+    transition-duration: initial;
+  }
+  .containerOne{
+    background-color: #0072b1;
+  }
+  .containerTwo{
+    background-color: #00acee;
+  }
+  .containerThree{
+    background-color: #B39C32;
+  }
+  .containerFour{
+    background-color: #2D792E;
+  }
+  .containerFive {
+    background-color: #C73D3D;
+  }
+}
+
+/*  Отключить hover-эффекты 
+@media (max-width: 720px){
+  .containerOne:hover,
+  .containerTwo:hover,
+  .containerThree:hover,
+  .containerFour:hover,
+  .containerFive:hover {
+    transition-duration: initial;
+  }
+  .containerOne{
+    background-color: #0072b1;
+  }
+  .containerTwo{
+    background-color: #00acee;
+  }
+  .containerThree{
+    background-color: #B39C32;
+  }
+  .containerFour{
+    background-color: #2D792E;
+  }
+  .containerFive {
+    background-color: #C73D3D;
+  }
+} */
 
 @media (max-width: 360px){
   .socialContainer {
