@@ -17,6 +17,7 @@
   justify-content: space-between;
   padding: 0 12%;
   box-sizing: border-box;
+  user-select: none;
 }
 
 /* Блок с логотипом и текстом */
@@ -117,21 +118,21 @@
   width: 420px;
   height: 64px; 
   position: relative;
-  /* overflow: hidden; */
+  /*overflow: hidden;*/
   transition: .3s;
   
   align-items: center;
   display: flex;
 }
-
 .scroll-text {
-    color: #ffffff;
-    font-weight: bold;
-    text-align: center;
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    font-size: 32px;
+  position:absolute;
+  white-space: nowrap;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+
+  font-size: 32px;
 }
 
 
@@ -151,22 +152,20 @@
 
 /* From Uiverse.io by ernestnash */ 
 .slide-btn {
- display: inline-block;
- padding: 10px 15px;
- font-size: 20px;
- font-weight: bold;
- color: #ffffff;
- border: 3px solid #FF9A00;
- cursor: pointer;
- position: relative;
- background-color: transparent;
- text-decoration: none;
- overflow: hidden;
- z-index: 1;
- font-family: inherit;
- /* min-width: 130px;*/
-  width: max-content;
- /* border-radius: 0.4em; */
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  border: 3px solid #FF9A00;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  font-family: inherit;
+  white-space: nowrap;
 }
 
 .slide-btn::before {

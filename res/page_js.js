@@ -6,7 +6,6 @@ const magicLine = document.querySelector('.line-magic');
 
 const scrollThreshold = 200; // порог в пикселях
 
-const marquee = document.querySelector('.marquee');
 const loader = document.getElementById('loader');
 
 const slidesContainer = document.getElementById('slides');
@@ -22,8 +21,7 @@ var startTint = .25;
 
 tint.style.opacity = startTint;
 
-//Момент, когда страница полностью загружена
-window.addEventListener('load', function() {
+document.addEventListener('DOMContentLoaded', function() {
 	setTimeout(function() {
 		loader.style.opacity='0';
 		setTimeout(function() {
@@ -34,6 +32,19 @@ window.addEventListener('load', function() {
 		},500);
 	},1000);
 });
+
+//Момент, когда страница полностью загружена
+// window.addEventListener('load', function() {
+// 	setTimeout(function() {
+// 		loader.style.opacity='0';
+// 		setTimeout(function() {
+// 			loader.style.display='none';
+
+// 			// Разблокируем прокрутку
+// 			document.body.classList.remove('no-scroll');
+// 		},500);
+// 	},1000);
+// });
 
   function closeMenu() {
     // Получаем чекбокс по ID
@@ -83,7 +94,6 @@ if (window.innerWidth >= 1024) {
     // Пример анимации: изменение прозрачности тонировки
     tint.style.opacity = startTint + scrollPercent * 1.6; // Меняем прозрачность в зависимости от прокрутки
 }
-	//marquee.style.left = `${-7 * headerScrollAmount}%`;
 
   ticking = false;
 }
@@ -128,7 +138,16 @@ document.addEventListener('DOMContentLoaded', () => {
 	// },5000);
 // });
 
-const texts = ["Фотопечать", "Фото на документы", "Вывески", "Сувенирная продукция", "Дизайн", "Брошюровка", "Ламинация"];
+
+//Бегущая строка
+const texts = ["Фотопечать", 
+  "Фото на документы", 
+  "Вывески", 
+  "Сувенирная продукция", 
+  "Дизайн", 
+  "Брошюровка", 
+  "Ламинация"];
+
 let currentIndexForSlogs = 0;
 
 const element = document.getElementById('scrollText');

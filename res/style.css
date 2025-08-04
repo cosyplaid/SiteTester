@@ -192,10 +192,8 @@ body {
   justify-items: center;
   align-items: center;
   width: 70%;
-  margin: 0px auto;
-  padding: 20px 20px;
+  margin: 10px auto;
   background: black;
-  border-radius: 20px;
 }
 
 .social-links-container
