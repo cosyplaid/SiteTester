@@ -115,13 +115,10 @@
 
 /*Бегущая строка*/
 #marquee {
-  /* width: 420px; */
   width: 100%;
   height: 64px; 
   position: relative;
-  /*overflow: hidden;*/
-  transition: .3s;
-  
+  transition: .3s;  
   align-items: center;
   display: flex;
   margin-inline: 10px;
@@ -136,24 +133,9 @@
   font-size: 24px;
 }
 
-
-  /* Блок справа: меню и кнопка */
-  .right-section {
-    display: flex;
-    align-items: center;
-    /*gap: 20px;  промежуток между элементами */
-  }
-
-.header-href-navigation {
-    color: #ffffff; /* белый цвет текста */
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 20px; 
-}
-
 /* From Uiverse.io by ernestnash */ 
 .slide-btn {
-  display: inline-block;
+  display: block;
   padding: 10px 15px;
   font-size: 20px;
   font-weight: bold;
@@ -167,6 +149,7 @@
   z-index: 1;
   font-family: inherit;
   white-space: nowrap;
+  text-align: center;
 }
 
 .slide-btn::before {
@@ -193,11 +176,21 @@
 }
 
 /* Стиль для навигации - горизонтально, по центру */
-#header-navigation {
+#navigation-header-pc {
   align-items: center;
   display: flex;
   list-style: none;
   padding-inline-start: 0px;
+}
+#navigation-header-pc a {
+  font-size: 20px; 
+}
+
+.navigation-header-pc-item{
+    margin-right: 20px;
+    text-decoration: none;
+    color: #ffffff; /* белый цвет текста */
+    font-weight: bold;
 }
 
 .burger-checkbox {
@@ -215,6 +208,7 @@
   background: transparent;
   width: 40px;
   height: 26px;
+  margin-left: 30px;
 }
 .burger::before,
 .burger::after {
@@ -252,7 +246,7 @@
   display: none;
 }
 
-.menu-container-mobile-list {
+#navigation-header-mobile {
     /* padding: 20px; */
     /* top: 80px; */
     right: 0;
@@ -269,32 +263,33 @@
     width: 40%;
     height: 100vh;
 }
-.menu-container-mobile-item {
-    display: block;
-    padding: 15px;
-    margin: 10px;
+#navigation-header-mobile a{
+  display: block;
+  padding: 15px;
+  margin: 10px;
+  font-size: 24px;
+}
+
+.navigation-header-mobile-item {
     color: white;
-    font-size: 24px;
     text-align: center;
     text-decoration: none;
 }
-.menu-container-mobile-item:hover {
+
+.navigation-header-mobile-item:hover {
   background: rgba(255,255,255,.2)
 }
-.burger-checkbox:checked ~ .menu-container-mobile-list {
+.burger-checkbox:checked ~ #navigation-header-mobile {
   transform: translateX(0);
 }
 
 @media screen and (min-width: 1080px) and (max-width: 1300px) {
-  .header-href-navigation {
-    font-size: 18px; 
-  }
-  .slide-btn {
+  #navigation-header-pc a {
     font-size: 18px; 
   }
 }
 
-@media screen and (max-width: 1080px){
+@media screen and (min-width: 849px) and (max-width: 1080px){
   #marquee{
     display: none;
   }

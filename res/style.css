@@ -33,7 +33,7 @@ body {
     width: 50%; /* размер логотипа */
     height: auto;
     animation: pulse 1.25s infinite; /* анимация для эффекта */
-	border-radius: 15px;
+	  border-radius: 15px;
   }
   
     @keyframes pulse {
@@ -118,7 +118,6 @@ body {
     flex-wrap: wrap;
     padding-top: 60px;
     justify-content: center;
-    gap: 20px;
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
@@ -139,6 +138,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin: 20px;
 }
 
 .info-icon{
@@ -189,11 +189,17 @@ body {
 .service-cards{
   display: flex;
   justify-content: space-between;
-  justify-items: center;
-  align-items: center;
+  /* align-items: stretch; */
   width: 70%;
   margin: 10px auto;
   background: black;
+}
+
+.service-cards img {
+  max-width: 25%;
+  width: auto;
+  object-fit: cover;
+  display: block;
 }
 
 .social-links-container

@@ -51,13 +51,11 @@
 
 <!-- Меню ПК -->
 <div id="menu-container-pc">
-    <nav>
-    	<ul id="header-navigation">
-        	<li style="margin-right: 20px"><a class="header-href-navigation" href="#">Главная</a></li>
-        	<li style="margin-right: 20px"><a class="header-href-navigation" href="#">Услуги</a></li>
-        	<li style="margin-right: 20px"><a class="header-href-navigation" href="#contact-container" onclick="scrollToContacts(event)">Контакты</a></li>
-        	<li><a class="slide-btn" href="#">Оформить заказ</a></li>
-		</ul>
+    <nav id="navigation-header-pc">
+        <a class="navigation-header-pc-item" href="#">Главная</a>
+        <a class="navigation-header-pc-item" href="#">Услуги</a>
+        <a class="navigation-header-pc-item" href="#contact-container" onclick="scrollToContacts(event)">Контакты</a>
+        <a class="slide-btn" href="#">Оформить заказ</a>
     </nav>
 </div>
 
@@ -65,11 +63,12 @@
 <div id="menu-container-mobile">
 	<input type="checkbox" id="burger-checkbox" class="burger-checkbox">
     <label for="burger-checkbox" class="burger"></label>
-    <ul class="menu-container-mobile-list">
-        <li><a href="#" class="menu-container-mobile-item" href="#" onclick="closeMenu()">Главная</a><li>
-        <li><a href="#" class="menu-container-mobile-item" href="#" onclick="closeMenu()">Услуги</a><li>
-        <li><a href="#" class="menu-container-mobile-item" href="#contact-container" onclick="scrollToContacts(event); closeMenu()">Контакты</a><li>
-    </ul>
+    <nav id="navigation-header-mobile">
+        <a class="navigation-header-mobile-item" href="#" onclick="closeMenu()">Главная</a>
+        <a class="navigation-header-mobile-item" href="#" onclick="closeMenu()">Услуги</a>
+        <a class="navigation-header-mobile-item" href="#contact-container" onclick="scrollToContacts(event); closeMenu()">Контакты</a>
+		<a class="slide-btn" href="#">Оформить заказ</a>
+	</nav>
 </div>
 
 	<div class="line-bottom" id="line"></div>
@@ -138,7 +137,7 @@
 	<h1 class="text-about-header"><b><font style="color: #FF9A00;">Услуги, которые мы предостовляем:</font></b></h1>
 
 	<div class="service-cards">
-			<img src="res\services\photo_service.jpeg" alt="Логотип" fetchpriority="high" loading="lazy" style="display: block;width: 200px;height: 100%;">
+			<img src="res\services\photo_service.jpeg" alt="Логотип" fetchpriority="high" loading="lazy">
 			<h2>Услуги фотографа:</h2>
 			<ul style="font-size: 20px;">
         		<li>Экспресс съёмка</li>
@@ -150,7 +149,7 @@
 	</div>
 
 	<div class="service-cards">
-			<img src="res\services\video-service.jpeg" alt="Логотип" fetchpriority="high" loading="lazy" style="display: block;width: 200px;height: 100%;">
+			<img src="res\services\video-service.jpeg" alt="Логотип" fetchpriority="high" loading="lazy">
 			<h2>Услуги видеографа:</h2>
 			<ul style="font-size: 20px;">
         		<li>Операторская работа</li>
@@ -159,7 +158,7 @@
 	</div>
 
 	<div class="service-cards">
-			<img src="res\services\studio_service.jpeg" alt="Логотип" fetchpriority="high" loading="lazy" style="display: block;width: 200px;height: 100%;">
+			<img src="res\services\studio_service.jpeg" alt="Логотип" fetchpriority="high" loading="lazy">
 			<h2>Студия типографии:</h2>
 			<ul style="font-size: 20px;">
         		<li>Фото на все виды документов. Ретушь и подстановка костюма.</li>
