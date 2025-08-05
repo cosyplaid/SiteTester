@@ -27,12 +27,6 @@
     object-fit:cover; /* сохраняет пропорции и обрезает по краям при необходимости */
 }
 
-@media (max-width: 720px){
-  .carousel {
-	height: calc(var(--vh, 1vh) * 70);
-  }
-}
-
 /* Навигационные точки (если нужны поверх) */
 .nav-dots {
 	user-select: none; /* запретить выделение текста */
@@ -88,4 +82,8 @@
   margin-top:10px;
 }
 
-
+@media (max-width: 860px){
+  .carousel {
+	height: calc(var(--vh, 1vh) * 70);
+  }
+}
