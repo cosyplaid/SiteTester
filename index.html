@@ -45,34 +45,31 @@
 </div>
 	
 <!-- Серединка - бегущая строка -->
-<div class="marquee">
-	<div class="scroll-text" id="scrollText"></div>
+<div id="marquee">
+	<div id="scroll-text"></div>
 </div>
 
-<!-- Правая часть с меню и кнопкой для ПК -->
-<div class="menu-container-pc">
-    <div class="right-section">
+<!-- Меню ПК -->
+<div id="menu-container-pc">
     <nav>
     	<ul id="header-navigation">
-        <li style="margin-right: 20px"><a class="header-href-navigation" href="#">Главная</a></li>
-        <li style="margin-right: 20px"><a class="header-href-navigation" href="#">Услуги</a></li>
-        <li style="margin-right: 20px"><a class="header-href-navigation" href="#contact-container" onclick="scrollToContacts(event)">Контакты</a></li>
-        <li><a class="slide-btn" href="#">Оформить заказ</a></li>
+        	<li style="margin-right: 20px"><a class="header-href-navigation" href="#">Главная</a></li>
+        	<li style="margin-right: 20px"><a class="header-href-navigation" href="#">Услуги</a></li>
+        	<li style="margin-right: 20px"><a class="header-href-navigation" href="#contact-container" onclick="scrollToContacts(event)">Контакты</a></li>
+        	<li><a class="slide-btn" href="#">Оформить заказ</a></li>
 		</ul>
     </nav>
-  </div>
+</div>
 
+<!-- Меню мобильные устройства -->
 <div id="menu-container-mobile">
-		<input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+	<input type="checkbox" id="burger-checkbox" class="burger-checkbox">
     <label for="burger-checkbox" class="burger"></label>
-
     <ul class="menu-container-mobile-list">
         <li><a href="#" class="menu-container-mobile-item" href="#" onclick="closeMenu()">Главная</a><li>
         <li><a href="#" class="menu-container-mobile-item" href="#" onclick="closeMenu()">Услуги</a><li>
         <li><a href="#" class="menu-container-mobile-item" href="#contact-container" onclick="scrollToContacts(event); closeMenu()">Контакты</a><li>
     </ul>
-
-</div>
 </div>
 
 	<div class="line-bottom" id="line"></div>

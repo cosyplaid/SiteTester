@@ -1,4 +1,4 @@
-const header = document.querySelector('header');
+const header = document.querySelector('.header');
 const square = document.querySelector('.square');
 const lineText = document.querySelector('.line-text');
 const letter = document.querySelector('.letter');
@@ -150,47 +150,45 @@ const texts = ["Фотопечать",
 
 let currentIndexForSlogs = 0;
 
-const element = document.getElementById('scrollText');
+const scrollTextHeader = document.getElementById('scroll-text');
 
 function sleep(ms) {
 	return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 async function animateText() {
-	element.textContent = texts[currentIndexForSlogs];
+	scrollTextHeader.textContent = texts[currentIndexForSlogs];
 
-	element.style.transition = 'none';
-	element.style.transform = 'translateX(-40%)';
-	element.style.opacity = 0;
+	scrollTextHeader.style.transition = 'none';
+	scrollTextHeader.style.transform = 'translateX(-40%)';
+	scrollTextHeader.style.opacity = 0;
 	await sleep(10);
 
 	// 1. Вылетает на -5% за 1.5 сек
-	element.style.transition = 'transform 1s ease, opacity 1.5s ease';
-	element.style.transform = 'translateX(-5%)';
-	element.style.opacity = 1;
+	scrollTextHeader.style.transition = 'transform 1s ease, opacity 1.5s ease';
+	scrollTextHeader.style.transform = 'translateX(-5%)';
+	scrollTextHeader.style.opacity = 1;
 	await sleep(1000);
 
 	// 2. Движется до +5% за 1 сек
-	element.style.transition = 'transform 15s ease, opacity 1s ease';
-	element.style.transform = 'translateX(5%)';
-    element.style.opacity = 1;
+	scrollTextHeader.style.transition = 'transform 15s ease, opacity 1s ease';
+	scrollTextHeader.style.transform = 'translateX(5%)';
+  scrollTextHeader.style.opacity = 1;
 	await sleep(4500);
 
 	// 3. В течение 0.5 сек двигается в 100%
-	element.style.transition = 'transform 1s ease, opacity .35s ease';
-	element.style.transform = 'translateX(100%)';
-	element.style.opacity = 0;
+	scrollTextHeader.style.transition = 'transform 1s ease, opacity .35s ease';
+	scrollTextHeader.style.transform = 'translateX(100%)';
+	scrollTextHeader.style.opacity = 0;
 	await sleep(1000);
 
-	element.style.transition = 'none';
-	element.style.transform = 'translateX(-100%)';
-	element.style.opacity = 0;
+	scrollTextHeader.style.transition = 'none';
+	scrollTextHeader.style.transform = 'translateX(-100%)';
+	scrollTextHeader.style.opacity = 0;
 	currentIndexForSlogs = (currentIndexForSlogs + 1) % texts.length;
 	await sleep(10);
 
 	startAnimation();
-
-	// После этого можно сменить текст и начать заново или выполнить другие действия
 }
 
 // Для запуска

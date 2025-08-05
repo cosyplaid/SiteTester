@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 12%;
+  padding: 0 8%;
   box-sizing: border-box;
   user-select: none;
 }
@@ -24,6 +24,7 @@
 .logo-container {
     display: flex;
     align-items: center;
+    margin-right: 20px;
 }
 
 /* Квадрат */
@@ -113,9 +114,9 @@
 }
 
 /*Бегущая строка*/
-.marquee {
-  left: 0%;
-  width: 420px;
+#marquee {
+  /* width: 420px; */
+  width: 100%;
   height: 64px; 
   position: relative;
   /*overflow: hidden;*/
@@ -123,16 +124,16 @@
   
   align-items: center;
   display: flex;
+  margin-inline: 10px;
 }
-.scroll-text {
+#scroll-text {
   position:absolute;
   white-space: nowrap;
   color: #ffffff;
   font-weight: bold;
   text-align: center;
   width: 100%;
-
-  font-size: 32px;
+  font-size: 24px;
 }
 
 
@@ -186,10 +187,9 @@
 }
 
 /* Общие стили */
-.menu-container-pc {
+#menu-container-pc {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  margin-left: 20px;
 }
 
 /* Стиль для навигации - горизонтально, по центру */
@@ -197,6 +197,7 @@
   align-items: center;
   display: flex;
   list-style: none;
+  padding-inline-start: 0px;
 }
 
 .burger-checkbox {
@@ -248,7 +249,7 @@
 }
 
 #menu-container-mobile{
-      display: none;
+  display: none;
 }
 
 .menu-container-mobile-list {
@@ -293,18 +294,16 @@
   }
 }
 
-
 @media screen and (max-width: 1080px){
-  .marquee{
+  #marquee{
     display: none;
   }
 }
 
-@media screen and (max-width: 720px){
-  #header-navigation{
+@media screen and (max-width: 850px){
+  #menu-container-pc{
     display: none;
   }
-
   #menu-container-mobile{
     display: block;
   }
