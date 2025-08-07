@@ -33,25 +33,12 @@ document.addEventListener('DOMContentLoaded', function() {
 	},1000);
 });
 
-//Момент, когда страница полностью загружена
-// window.addEventListener('load', function() {
-// 	setTimeout(function() {
-// 		loader.style.opacity='0';
-// 		setTimeout(function() {
-// 			loader.style.display='none';
-
-// 			// Разблокируем прокрутку
-// 			document.body.classList.remove('no-scroll');
-// 		},500);
-// 	},1000);
-// });
-
-  function closeMenu() {
+function closeMenu() {
     // Получаем чекбокс по ID
     const checkbox = document.getElementById('burger-checkbox');
     // Устанавливаем его значение в false (unchecked)
     checkbox.checked = false;
-  }
+}
 
 let ticking = false;
 
@@ -85,15 +72,11 @@ function updateOnScroll() {
   }
 
   // Типо ПК
-if (window.innerWidth >= 1024) {
-    // Смещение подложки
-    t_line_background.style.transform = `translateY(${scrollPercent * 100}px)`; // Смещение на X px
-		// Пример анимации: изменение прозрачности подложки
-    //t_line_background.style.opacity = 1 - scrollPercent * .75; // Меняем прозрачность в зависимости от прокрутки
-
-    // Пример анимации: изменение прозрачности тонировки
-    tint.style.opacity = startTint + scrollPercent * 1.6; // Меняем прозрачность в зависимости от прокрутки
-}
+if (window.innerWidth >= 1024) 
+  {
+    t_line_background.style.transform = `translateY(${scrollPercent * 100}px)`; //Смещение подложки
+    tint.style.opacity = startTint + scrollPercent * 1.6; // Меняем прозрачность тонировки в зависимости от прокрутки
+  }
 
   ticking = false;
 }
@@ -206,53 +189,6 @@ let activeImage = null; // текущий "следящий" элемент
 let isDraggingImage = false;
 let startXImage = 0;
 let startYImage = 0;
-
-// Обработчики для всего документа, чтобы следить за движением
-// document.addEventListener('mousedown', (e) => {
-//     // Проверяем, если клик по изображению
-//     const targetImg = e.target.closest('img');
-//     if(targetImg && targetImg.parentElement.classList.contains('slide')){
-//         activeImage = targetImg;
-//         isDraggingImage = true;
-//         startXImage = e.clientX - activeImage.offsetLeft;
-//         startYImage = e.clientY - activeImage.offsetTop;
-//         // Можно отключить переходы для плавности
-//         activeImage.style.transition = 'none';
-//         // Меняем курсор
-//         activeImage.style.cursor='grabbing';
-//     }
-// });
-
-// document.addEventListener('mousemove', (e) => {
-//     if(isDraggingImage && activeImage){
-//         // Обновляем позицию изображения
-//         const newLeft = e.clientX - startXImage;
-//         const newTop = e.clientY - startYImage;
-//         activeImage.style.left = `${newLeft}px`;
-//         activeImage.style.top = `${newTop}px`;
-//     }
-// });
-
-// // Аналогично для мобильных устройств с touch-событиями:
-// document.addEventListener('touchstart', (e) => {
-//     const touchTarget=e.target.closest('img');
-//     if(touchTarget && touchTarget.parentElement.classList.contains('slide')){
-//         activeImage=touchTarget;
-//         isDraggingImage=true;
-//         startXImage= e.touches[0].clientX - activeImage.offsetLeft;
-//         startYImage= e.touches[0].clientY - activeImage.offsetTop;
-//         activeImage.style.transition='none';
-//     }
-// });
-
-// document.addEventListener('touchmove', (e) => {
-//     if(isDraggingImage && activeImage){
-//         const newLeft= e.touches[0].clientX - startXImage;
-//         const newTop= e.touches[0].clientY - startYImage;
-//         activeImage.style.left=`${newLeft}px`;
-//         activeImage.style.top=`${newTop}px`;
-//     }
-// });
 
 document.addEventListener('touchend', () => {
     if(isDraggingImage && activeImage){
