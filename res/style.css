@@ -181,6 +181,7 @@ body {
   z-index: 3; /* Содержимое выше подложки */
   color: white;
 	background: #111111;
+  padding: 20px;
 }
 
 .service-cards{
@@ -188,7 +189,7 @@ body {
   justify-content: space-between;
   /* align-items: stretch; */
   width: 70%;
-  margin: 10px auto;
+  margin: 20px auto;
   background: black;
 }
 
