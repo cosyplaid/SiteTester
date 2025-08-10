@@ -1,0 +1,87 @@
+  .service-container {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  .service-cards-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+  }
+
+  /* Карточка */
+  .service-card {
+    flex: 0 0 auto;
+    width: 200px; /* ширина карточки */
+    height: 300px; /* высота карточки */
+    margin: 0 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    /* По умолчанию неактивная карточка */
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    
+    /* Размер внутри - примерно 80% от активной */
+  }
+
+  /* Неактивная карточка (градент) с иконкой и текстом */
+  .service-card.inactive {
+    width: 200px; /* ширина карточки */
+    height: 200px; /* высота карточки */
+    opacity: 0.7;
+    
+  }
+
+  /* Активная карточка */
+  .service-card.active {
+    background-color: #ffffff; /* белый фон */
+    width: 200px; /* ширина карточки */
+    height: 300px; /* высота карточки */ 
+   }
+
+   /* Иконка и название услуги для неактивных карточек */
+   .service-card.inactive .icon {
+     font-size:24px;
+     margin-bottom:10px;
+   }
+   
+   /* Заголовок услуги для активной карточки */
+   .service-card.active h3 {
+     margin-top:10px;
+     margin-bottom:10px;
+   }
+   
+   /* Описание услуги внутри активной карточки */
+   .service-card.active p {
+     padding:0 10px;
+     text-align:center;
+   }
+
+   /* Кнопки прокрутки */
+   .service-buttons {
+     margin-top:20px;
+     display:flex;
+     gap:10px;
+   }
+   
+   .service-button {
+     padding:10px 20px;
+     font-size:16px;
+     border:none;
+     border-radius:5px;
+     background-color:#333;
+     color:#fff;
+     cursor:pointer;
+     transition:.3s background-color;
+   }
+   
+   .service-button:hover {
+     background-color:#555;
+   }
